@@ -1,52 +1,79 @@
-index.md
-# Fundraising Dashboard Documentation
+## How scoring works
 
-This documentation explains how the Human Impacts Institute fundraising dashboard works,
-what the scores mean, and how to use it for decision-making.
+The dashboard generates **two different scores**, each designed to answer a different fundraising question.
 
 ---
 
-## What this is
+### 1. Review Priority Score
 
-This dashboard turns a Google Sheet of potential funders into:
+**Question:** *Which funders need research, cleanup, or follow-up first?*
 
-- A **prioritized review list**
-- A **clear “apply next” queue**
-- A single, shareable source of truth
+This score helps identify records that are **important but incomplete, outdated, or unclear**.
 
-Pipeline:
+A higher Review Priority Score means a funder should be reviewed sooner.
 
-**Google Sheet → Python script → Markdown dashboard**
+The score increases when:
 
----
+* The funder is marked **High or Medium priority**
+* The funder supports **multiple HII programs**
+* Information has **not been updated recently**
+* **Deadlines are missing or unclear**
+* **Websites or application links are missing**
+* Key fields like *What They Fund* or *Geography* are empty
 
-## Main files
+This queue is best used for:
 
-- `scripts/score_grants.py`  
-  Scores and ranks all funders
-
-- `dashboards/grants_dashboard.md`  
-  The actual dashboard output
-
-- `data/source_url.txt`  
-  Link to the Google Sheet
-
----
-
-## Who this is for
-
-- Fundraising & development staff
-- Program leadership
-- Anyone prioritizing grant outreach
-
-No coding knowledge required to *use* the dashboard.
+* Research days
+* Data cleanup
+* Strategic planning
+* Delegating follow-ups to staff or interns
 
 ---
 
-## Where to go next
+### 2. Application Priority Score
 
-- View the dashboard:  
-  `dashboards/grants_dashboard.md`
+**Question:** *Which grants should we apply to next?*
 
-- Learn how scoring works:  
-  (Coming next)
+This score is only calculated for funders that have **at least one known deadline**.
+
+A higher Application Priority Score means the funder is a stronger near-term opportunity.
+
+The score increases when:
+
+* A deadline is **soon**
+* The funder supports **multiple HII programs**
+* The relationship is **warm or active**
+* The funder is marked as a **higher priority**
+
+The score is reduced when:
+
+* The process is **invitation-only**
+* The application is described as **complex or high-burden**
+* The deadline has already passed
+
+This queue is best used for:
+
+* Weekly application planning
+* Grant calendar reviews
+* Deciding what *not* to apply to yet
+
+---
+
+### Why two scores?
+
+Fundraising work happens in **two modes**:
+
+1. **Research & preparation**
+2. **Application & execution**
+
+Separating these scores prevents urgent deadlines from hiding important strategic work — and prevents incomplete records from cluttering application planning.
+
+---
+
+### How to use the dashboard
+
+* Start with **Apply Next** when planning submissions
+* Use **Update Queue** to assign research and cleanup tasks
+* Re-run the script after updating the Google Sheet to refresh priorities
+
+The dashboard is designed to be **iterative** — scores improve as your data improves.

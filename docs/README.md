@@ -2,4 +2,4 @@
 
 This folder will host the public version of the fundraising dashboard.
 
-The dashboard is generated automatically from a Google Sheet.
+The dashboard is generated automatically from a Google Sheet. 

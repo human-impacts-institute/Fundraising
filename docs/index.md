@@ -1,12 +1,15 @@
 # Grants Dashboard
 
 <link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/refresh-config.js"></script>
+<script defer src="assets/refresh.js"></script>
 
 Strategic view of funding opportunities, split into two action queues: research and apply.
 
 <!-- DASHBOARD:START -->
 <section class="dashboard">
 <div class="dashboard-meta">
+<button class="refresh-button" type="button">Refresh</button>
 <div class="refreshed">Last refreshed: 2026-01-14</div>
 </div>
 <div class="snapshot">

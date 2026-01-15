@@ -34,9 +34,51 @@ main, .markdown-body {
 .dashboard-meta {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 12px;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.refresh-button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: var(--card);
+  color: var(--hii-dark-blue);
+  font-family: "Space Grotesk", "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(22, 29, 60, 0.08);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.refresh-button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.65;
+  box-shadow: none;
+}
+
+.refresh-button.is-loading {
+  background: rgba(153, 216, 209, 0.25);
+}
+
+.refresh-button.has-error {
+  background: rgba(194, 22, 20, 0.12);
+  color: var(--hii-red);
+}
+
+.refresh-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(22, 29, 60, 0.12);
+}
+
+.refresh-button:active {
+  transform: translateY(0);
 }
 
 .snapshot {

@@ -1,0 +1,38 @@
+name: Refresh dashboard
+
+on:
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate dashboard
+        run: python3 scripts/score_grants.py
+        env:
+          SOURCE_URL: ${{ secrets.SOURCE_URL }}
+
+      - name: Commit updates
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dashboards/grants_dashboard.md docs/index.md data/scored_grants.csv
+          git commit -m "Refresh dashboard"
+          git push

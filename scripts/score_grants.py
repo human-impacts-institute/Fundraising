@@ -64,6 +64,7 @@ PROGRAM_COLS = [
 ]
 
 SOURCE_URL_FILE = os.path.join("data", "source_url.txt")
+SOURCE_URL_ENV = "SOURCE_URL"
 DASHBOARD_PATH = os.path.join("dashboards", "grants_dashboard.md")
 SCORED_CSV_PATH = os.path.join("data", "scored_grants.csv")
 DOCS_DASHBOARD_PATH = os.path.join("docs", "index.md")
@@ -81,9 +82,15 @@ def ensure_dirs() -> None:
 
 
 def read_source_url() -> str:
+    env_url = os.getenv(SOURCE_URL_ENV, "").strip()
+    if env_url:
+        if not env_url.startswith("https://docs.google.com/spreadsheets/"):
+            raise ValueError(f"{SOURCE_URL_ENV} does not look like a Google Sheets URL.")
+        return env_url
     if not os.path.exists(SOURCE_URL_FILE):
         raise FileNotFoundError(
-            f"Missing {SOURCE_URL_FILE}. Create it and paste your Google Sheets CSV URL."
+            f"Missing {SOURCE_URL_FILE}. Create it and paste your Google Sheets CSV URL, "
+            f"or set {SOURCE_URL_ENV}."
         )
     with open(SOURCE_URL_FILE, "r", encoding="utf-8") as f:
         url = f.read().strip()
@@ -492,6 +499,7 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
     lines: List[str] = []
     lines.append('<section class="dashboard">')
     lines.append('<div class="dashboard-meta">')
+    lines.append('<button class="refresh-button" type="button">Refresh</button>')
     lines.append(f"<div class=\"refreshed\">Last refreshed: {html.escape(today)}</div>")
     lines.append("</div>")
 

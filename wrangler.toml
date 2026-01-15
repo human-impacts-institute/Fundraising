@@ -1,0 +1,10 @@
+name = "fundraising-refresh"
+main = "worker.js"
+compatibility_date = "2024-10-01"
+
+[vars]
+OWNER = "human-impacts-institute"
+REPO = "Fundraising"
+WORKFLOW_FILE = "refresh-dashboard.yml"
+WORKFLOW_REF = "main"
+ALLOWED_ORIGIN = "https://human-impacts-institute.github.io"

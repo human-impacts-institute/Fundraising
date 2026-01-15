@@ -7,4 +7,5 @@ Google Sheet → Python scoring script → Markdown dashboard
 
 ## Dashboard
 See the dashboard here:
-dashboards/grants_dashboard.md
+- Public GitHub Pages: docs/index.md
+- Generated Markdown: dashboards/grants_dashboard.md

@@ -8,6 +8,7 @@ Pulls the "All Potential Grants" tab from Google Sheets as CSV, calculates:
 
 Outputs:
 - dashboards/grants_dashboard.md
+- docs/index.md (dashboard section)
 - data/scored_grants.csv (optional snapshot)
 
 Setup
@@ -22,6 +23,7 @@ Setup
 from __future__ import annotations
 
 import csv
+import html
 import os
 import re
 from dataclasses import dataclass
@@ -64,6 +66,9 @@ PROGRAM_COLS = [
 SOURCE_URL_FILE = os.path.join("data", "source_url.txt")
 DASHBOARD_PATH = os.path.join("dashboards", "grants_dashboard.md")
 SCORED_CSV_PATH = os.path.join("data", "scored_grants.csv")
+DOCS_DASHBOARD_PATH = os.path.join("docs", "index.md")
+DOCS_MARKER_START = "<!-- DASHBOARD:START -->"
+DOCS_MARKER_END = "<!-- DASHBOARD:END -->"
 
 
 # ----------------------------
@@ -228,9 +233,15 @@ def pick_next_deadline(loi: Optional[date], app: Optional[date]) -> Optional[dat
 
 def safe_url(u: Any) -> str:
     s = norm_str(u)
-    if s and not s.lower().startswith(("http://", "https://")):
+    if not s:
+        return ""
+    if " " in s:
+        return ""
+    if s.lower().startswith(("http://", "https://")):
+        return s
+    if re.match(r"^[a-z0-9.-]+\.[a-z]{2,}(/|$)", s, flags=re.IGNORECASE):
         return "https://" + s
-    return s
+    return ""
 
 
 # ----------------------------
@@ -305,14 +316,18 @@ def compute_scores(row: pd.Series) -> Scores:
 def fmt_date(d: Optional[date]) -> str:
     if d is None:
         return ""
+    if isinstance(d, str):
+        return d.strip()
+    if isinstance(d, datetime):
+        return d.date().strftime("%Y-%m-%d")
     return d.strftime("%Y-%m-%d")
 
 
-def render_table(rows: List[Dict[str, Any]], title: str, max_rows: int = 25) -> str:
+def render_table_md(rows: List[Dict[str, Any]], title: str, max_rows: int = 25) -> str:
     lines: List[str] = []
     lines.append(f"## {title}")
     lines.append("")
-    lines.append("| Rank | Organization | Priority | Next deadline | Programs | Website | Notes |")
+    lines.append("| Rank | Organization | Priority | Next deadline | Programs | Links | Notes |")
     lines.append("| ---: | --- | --- | --- | ---: | --- | --- |")
 
     for i, r in enumerate(rows[:max_rows], start=1):
@@ -321,8 +336,14 @@ def render_table(rows: List[Dict[str, Any]], title: str, max_rows: int = 25) -> 
         nd = fmt_date(r.get("Next Deadline"))
         pm = r.get("Program Matches", 0)
 
-        site = safe_url(r.get(COL_INFO_SITE, "")) or safe_url(r.get(COL_APP_SITE, ""))
-        site_md = f"[link]({site})" if site else ""
+        info_site = safe_url(r.get(COL_INFO_SITE, ""))
+        app_site = safe_url(r.get(COL_APP_SITE, ""))
+        link_bits: List[str] = []
+        if info_site:
+            link_bits.append(f"[info]({info_site})")
+        if app_site:
+            link_bits.append(f"[apply]({app_site})")
+        site_md = " ".join(link_bits)
 
         notes = norm_str(r.get(COL_NOTES, ""))
         notes = re.sub(r"\s+", " ", notes).strip()
@@ -331,11 +352,101 @@ def render_table(rows: List[Dict[str, Any]], title: str, max_rows: int = 25) -> 
 
         lines.append(f"| {i} | {org} | {pri} | {nd} | {pm} | {site_md} | {notes} |")
 
-    lines.append("")
     return "\n".join(lines)
 
 
-def write_dashboard(df: pd.DataFrame) -> None:
+def priority_class(priority: str) -> str:
+    s = norm_str(priority).upper()
+    if "HIGH" in s:
+        return "priority-high"
+    if "MED" in s:
+        return "priority-med"
+    if "LOW" in s:
+        return "priority-low"
+    return "priority-unknown"
+
+
+def build_badges(missing_deadlines: bool, missing_sites: bool) -> str:
+    badges: List[str] = []
+    if missing_deadlines:
+        badges.append('<span class="badge badge-warn">missing deadline</span>')
+    if missing_sites:
+        badges.append('<span class="badge badge-warn">missing links</span>')
+    return " ".join(badges)
+
+
+def render_table_html(rows: List[Dict[str, Any]], title: str, max_rows: int = 25) -> str:
+    lines: List[str] = []
+    lines.append(f'<h2 class="queue-title">{html.escape(title)}</h2>')
+    lines.append('<div class="table-wrap">')
+    lines.append('<table class="dashboard-table">')
+    lines.append(
+        "<thead><tr>"
+        "<th class=\"col-rank\">Rank</th>"
+        "<th>Organization</th>"
+        "<th>Priority</th>"
+        "<th>Next deadline</th>"
+        "<th class=\"col-programs\">Programs</th>"
+        "<th>Links</th>"
+        "<th>Notes</th>"
+        "</tr></thead>"
+    )
+    lines.append("<tbody>")
+
+    for i, r in enumerate(rows[:max_rows], start=1):
+        org = html.escape(norm_str(r.get(COL_ORG, "")))
+        pri = html.escape(norm_str(r.get(COL_PRIORITY, "")))
+        nd = html.escape(fmt_date(r.get("Next Deadline")))
+        pm = html.escape(str(r.get("Program Matches", 0)))
+        notes = norm_str(r.get(COL_NOTES, ""))
+        notes = re.sub(r"\s+", " ", notes).strip()
+        if len(notes) > 120:
+            notes = notes[:117] + "..."
+        notes = html.escape(notes)
+
+        info_site = safe_url(r.get(COL_INFO_SITE, ""))
+        app_site = safe_url(r.get(COL_APP_SITE, ""))
+        link_bits: List[str] = []
+        if info_site:
+            link_bits.append(f'<a href="{html.escape(info_site)}" target="_blank" rel="noopener">info</a>')
+        if app_site:
+            link_bits.append(f'<a href="{html.escape(app_site)}" target="_blank" rel="noopener">apply</a>')
+        links_html = " ".join(link_bits) if link_bits else ""
+
+        badges = build_badges(
+            bool(r.get("Missing Deadlines", False)),
+            bool(r.get("Missing Sites", False)),
+        )
+        if badges:
+            notes = f"{badges} {notes}".strip()
+
+        row_class = priority_class(pri)
+        lines.append(
+            "<tr class=\"{}\">"
+            "<td class=\"col-rank\">{}</td>"
+            "<td class=\"col-org\">{}</td>"
+            "<td class=\"col-priority\">{}</td>"
+            "<td class=\"col-deadline\">{}</td>"
+            "<td class=\"col-programs\">{}</td>"
+            "<td class=\"col-links\">{}</td>"
+            "<td class=\"col-notes\">{}</td>"
+            "</tr>".format(
+                row_class,
+                i,
+                org,
+                pri,
+                nd,
+                pm,
+                links_html,
+                notes,
+            )
+        )
+
+    lines.append("</tbody></table></div>")
+    return "\n".join(lines)
+
+
+def build_dashboard_section_md(df: pd.DataFrame) -> str:
     today = date.today().isoformat()
 
     # Summary stats
@@ -350,8 +461,6 @@ def write_dashboard(df: pd.DataFrame) -> None:
     apply_next = apply_next.sort_values(["Application Priority Score", "Next Deadline"], ascending=[False, True])
 
     md: List[str] = []
-    md.append(f"# Grants Dashboard")
-    md.append("")
     md.append(f"Last refreshed: {today}")
     md.append("")
     md.append("### Snapshot")
@@ -362,11 +471,79 @@ def write_dashboard(df: pd.DataFrame) -> None:
     md.append(f"- Funders with at least one deadline: {have_deadlines}")
     md.append("")
 
-    md.append(render_table(update_queue.to_dict(orient="records"), "Update Queue (research and refresh first)", 30))
-    md.append(render_table(apply_next.to_dict(orient="records"), "Apply Next (only includes funders with deadlines)", 30))
+    md.append(render_table_md(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
+    md.append("")
+    md.append(render_table_md(apply_next.to_dict(orient="records"), "Apply Next Queue (deadline-driven)", 30))
+    return "\n".join(md).strip() + "\n"
+
+
+def build_dashboard_section_html(df: pd.DataFrame) -> str:
+    today = date.today().isoformat()
+
+    total = len(df)
+    missing_deadlines = int(df["Missing Deadlines"].sum())
+    missing_sites = int(df["Missing Sites"].sum())
+    have_deadlines = total - missing_deadlines
+
+    update_queue = df.sort_values(["Review Priority Score", COL_PRIORITY, COL_ORG], ascending=[False, True, True])
+    apply_next = df[df["Application Priority Score"].notna()].copy()
+    apply_next = apply_next.sort_values(["Application Priority Score", "Next Deadline"], ascending=[False, True])
+
+    lines: List[str] = []
+    lines.append('<section class="dashboard">')
+    lines.append('<div class="dashboard-meta">')
+    lines.append(f"<div class=\"refreshed\">Last refreshed: {html.escape(today)}</div>")
+    lines.append("</div>")
+
+    lines.append('<div class="snapshot">')
+    lines.append(
+        "<div class=\"card\"><div class=\"card-label\">Total funders</div>"
+        f"<div class=\"card-value\">{total}</div></div>"
+    )
+    lines.append(
+        "<div class=\"card\"><div class=\"card-label\">Missing deadlines</div>"
+        f"<div class=\"card-value\">{missing_deadlines}</div></div>"
+    )
+    lines.append(
+        "<div class=\"card\"><div class=\"card-label\">Missing links</div>"
+        f"<div class=\"card-value\">{missing_sites}</div></div>"
+    )
+    lines.append(
+        "<div class=\"card\"><div class=\"card-label\">With deadlines</div>"
+        f"<div class=\"card-value\">{have_deadlines}</div></div>"
+    )
+    lines.append("</div>")
+
+    lines.append(render_table_html(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
+    lines.append(render_table_html(apply_next.to_dict(orient="records"), "Apply Next Queue (deadline-driven)", 30))
+    lines.append("</section>")
+    return "\n".join(lines).strip() + "\n"
+
+
+def write_dashboard(df: pd.DataFrame) -> None:
+    section_md = build_dashboard_section_md(df)
+    section_html = build_dashboard_section_html(df)
+    full_md = "# Grants Dashboard\n\n" + section_md
 
     with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
-        f.write("\n".join(md))
+        f.write(full_md)
+
+    if os.path.exists(DOCS_DASHBOARD_PATH):
+        with open(DOCS_DASHBOARD_PATH, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        if DOCS_MARKER_START not in content or DOCS_MARKER_END not in content:
+            raise ValueError(
+                f"Missing dashboard markers in {DOCS_DASHBOARD_PATH}. "
+                f"Add {DOCS_MARKER_START} and {DOCS_MARKER_END} to enable auto-updates."
+            )
+
+        before, rest = content.split(DOCS_MARKER_START, 1)
+        _, after = rest.split(DOCS_MARKER_END, 1)
+        updated = before + DOCS_MARKER_START + "\n" + section_html + DOCS_MARKER_END + after
+
+        with open(DOCS_DASHBOARD_PATH, "w", encoding="utf-8") as f:
+            f.write(updated)
 
 
 def main() -> None:

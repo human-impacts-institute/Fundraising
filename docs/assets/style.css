@@ -283,6 +283,9 @@ main, .markdown-body {
 /* ── Auth gate ───────────────────────────────────────── */
 body { margin: 0; }
 
+/* Hide the Netlify Identity widget's auto-injected button — we use our own auth UI */
+[data-netlify-identity-button] { display: none !important; }
+
 .auth-gate {
   min-height: 100vh;
   display: flex;

@@ -71,6 +71,26 @@ main, .markdown-body {
 .refresh-button.is-loading     { background: var(--hii-turquoise); color: var(--hii-dark-blue); }
 .refresh-button.has-error      { background: var(--hii-red); }
 
+/* ── Sheets link button ──────────────────────────────── */
+.sheets-link {
+  align-items: center;
+  border: 2px solid var(--hii-dark-blue);
+  border-radius: 999px;
+  color: var(--hii-dark-blue);
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  gap: 6px;
+  letter-spacing: 0.06em;
+  padding: 6px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 150ms ease, color 150ms ease, transform 120ms ease;
+}
+.sheets-link:hover  { background: var(--hii-dark-blue); color: #fff; transform: translateY(-1px); }
+.sheets-link:active { transform: translateY(0); }
+
 /* ── Snapshot cards ──────────────────────────────────── */
 .snapshot {
   display: grid;

@@ -11,7 +11,7 @@ Strategic view of funding opportunities, split into two action queues: research 
 <section class="dashboard">
 <div class="dashboard-meta">
 <button class="refresh-button" type="button">Refresh</button>
-<div class="refreshed">Last refreshed: 2026-03-26</div>
+<div class="refreshed">Last refreshed: 2026-03-27</div>
 </div>
 <div class="snapshot">
 <div class="card"><div class="card-label">Total funders</div><div class="card-value">317</div></div>

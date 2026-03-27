@@ -14,9 +14,9 @@ Strategic view of funding opportunities, split into two action queues: research 
 <div class="refreshed">Last refreshed: 2026-03-27</div>
 </div>
 <div class="snapshot">
-<div class="card"><div class="card-label">Total funders</div><div class="card-value">318</div></div>
-<div class="card"><div class="card-label">Missing deadlines</div><div class="card-value">274</div></div>
-<div class="card"><div class="card-label">Missing links</div><div class="card-value">15</div></div>
+<div class="card"><div class="card-label">Total funders</div><div class="card-value">317</div></div>
+<div class="card"><div class="card-label">Missing deadlines</div><div class="card-value">273</div></div>
+<div class="card"><div class="card-label">Missing links</div><div class="card-value">14</div></div>
 <div class="card"><div class="card-label">With deadlines</div><div class="card-value">44</div></div>
 </div>
 

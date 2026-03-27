@@ -279,3 +279,7 @@ main, .markdown-body {
   .dashboard-table thead th,
   .dashboard-table tbody td { padding: 8px 10px; }
 }
+
+/* ── Hide Jekyll site header and footer ──────────────── */
+.site-header,
+.site-footer { display: none; }

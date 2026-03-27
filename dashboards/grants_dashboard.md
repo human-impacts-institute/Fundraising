@@ -4,10 +4,10 @@ Last refreshed: 2026-03-27
 
 ### Snapshot
 
-- Total funders: 318
+- Total funders: 317
 - Funders missing both deadlines: 273
 - Funders missing websites: 14
-- Funders with at least one deadline: 45
+- Funders with at least one deadline: 44
 
 ## On Deck
 
@@ -18,27 +18,26 @@ Last refreshed: 2026-03-27
 | 3 | Brooklyn ORG / Brooklyn Community Foundation | MEDIUM | 2026-05-15 | 7 | [info](https://brooklyn.org/) [apply](https://brooklyn.org/how-to-apply-for-bko-funding/) |  |
 | 4 | Dreyfus Foundation | LOW | 2026-07-15 | 8 | [info](http://www.mvdreyfusfoundation.org/#!application-guidelines) [apply](https://webportalapp.com/sp/login/max_and_victoria_dreyfus_foundation_grant) |  |
 | 5 | Vilcek Foundation |  | 2026-04-30 | 5 | [info](https://vilcek.org/grants/) [apply](https://portal.vilcek.org/grantportal/s/login/?ec=302&startURL=%2Fgrantportal%2Fs%2F%3F_gl%3D1*epgerc*_gcl_au*MTMwODY3NzE0Ni4xNzM3NzM0ODk3*_ga*MTY4Mjg0NTYzNy4xNzM3NzM0ODk3*_ga_PMRH1P23GE*MTczNzczNDg5Ny4xLjEuMTczNzczNTQyMC4wLjAuMA..*_ga_2V5DYM0WCN*MTczNzczNDg5Ny4xLjEuMTczNzczNTQyMC41OS4wLjE0Mzg2MzM5NA..) |  |
-| 6 | TEST #1 |  | 2026-04-30 | 5 | [info](https://vilcek.org/grants/) [apply](https://portal.vilcek.org/grantportal/s/login/?ec=302&startURL=%2Fgrantportal%2Fs%2F%3F_gl%3D1*epgerc*_gcl_au*MTMwODY3NzE0Ni4xNzM3NzM0ODk3*_ga*MTY4Mjg0NTYzNy4xNzM3NzM0ODk3*_ga_PMRH1P23GE*MTczNzczNDg5Ny4xLjEuMTczNzczNTQyMC4wLjAuMA..*_ga_2V5DYM0WCN*MTczNzczNDg5Ny4xLjEuMTczNzczNTQyMC41OS4wLjE0Mzg2MzM5NA..) |  |
-| 7 | Florence Muller Fdn | NO | 2026-05-01 | 5 | [info](https://www.fmmullerfdn.org/) [apply](https://www.fmmullerfdn.org/grant-guidelines) | Must be within 6 NY counties (not applicable to NYC) |
-| 8 | Creative Capital | MEDIUM | 2026-04-02 | 3 | [info](https://creative-capital.org/creative-capital-award/award-application/) [apply](https://apply.creative-capital.org/#button) | Fund specific new creative works not ongoing exhibitions or programs |
-| 9 | RTX Corporation | MEDIUM | 2026-07-31 | 6 | [info](https://www.utcfoundation.org/who-we-are.html) [apply](https://www.utcfoundation.org/contact-us.html) | Must be sponsored by an RTX employee to apply |
-| 10 | Barker Welfare Foundation | MEDIUM | 2026-08-01 | 6 | [info](https://www.barkerwelfare.org/) [apply](https://www.barkerwelfare.org/funding-inquiry/) |  |
-| 11 | NBC Universal Impact Grants | HIGH, 2025 TO DO | 2026-04-15 | 1 | [info](https://www.localimpactgrants.com/) | The applying organization’s total expenses must be between $100,000 and $1,00... |
-| 12 | Tiffany & Co. Foundation | MEDIUM | 2026-05-01 | 3 | [info](https://www.tiffanyandcofoundation.org) [apply](https://www.tiffanyandcofoundation.org/how-to-apply.html) |  |
-| 13 | Sappi- Ideas That Matter | MEDIUM | 2026-07-15 | 4 | [info](https://www.sappi.com/sappi-ideas-that-matter) |  |
-| 14 | 11th Hour Racing | MEDIUM | 2026-03-31 | 1 | [info](https://11thhourracing.org/grant-giving/) [apply](https://11thhourracing.org/apply-for-a-grant/) | Mainly focused on ocean conservation efforts |
-| 15 | Robert Lehman Foundation - | MEDIUM | 2026-04-01 | 1 | [info](https://www.robertlehmanfoundation.org/) [apply](https://www.robertlehmanfoundation.org/guidelines.php) |  |
-| 16 | Samuel H. Kress Foundation | MEDIUM, Invitation Only | 2026-04-01 | 1 | [info](https://www.kressfoundation.org/Programs/Grants/History-of-Art) [apply](https://www.kressfoundation.org/Programs/Grants/Conservation) |  |
-| 17 | Prince Albert of Monaco II Foundation (HII Europe) | 2026 TO DO | 2026-03-31 | 1 | [info](https://www.fpa2.org/en/submit-a-project) [apply](https://www.fpa2.org/en/submit-a-project) | Applied in 2025; strong climate fit and should be actively followed up. |
-| 18 | NYSERDA (Dept of Labor) - Climate Justice Fellow | 2026 TO DO | 2026-06-30 | 3 | [info](https://www.nyserda.ny.gov/All-Programs/Climate-Justice-Fellowship) [apply](https://portal.nyserda.ny.gov/CORE_Solicitation_Detail_Page?SolicitationId=a0rt000001Mh9IN&_gl=1*1gejtjc*_gcl_au*ODAyMzgwODYyLjE3MzgwMTkwMDY.*_ga*MjAwNTY0NzUwNi4xNzM4MDE4Njk0*_ga_DRYJB34TXH*MTczODAxOTAwNi4xLjEuMTczODAxOTE1MS42MC4wLjA.) | Rolling admissions on first come first served Up to $40k per fellow Fellow mu... |
-| 19 | Trust for Mutual Understanding | MEDIUM | 2026-05-06 | 1 | [info](https://www.tmuny.org) [apply](https://tmuny.fluxx.io/user_sessions/new) | Do not fund youth initatives; must partner with an org in one of these countr... |
-| 20 | Foundation for Sustainability and Innovation | NO | 2026-04-15 | 0 | [info](http://fsifoundation.com/grants/) |  |
-| 21 | Awesome Foundation | LOW | 2026-03-27 | 0 | [info](https://www.awesomefoundation.org/en/about_us) [apply](https://www.awesomefoundation.org/en/submissions/new) |  |
-| 22 | Con Edison | 2026 TO DO | 2026-06-30 | 1 | [info](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) [apply](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) | Concept Paper must be submitted before April 30th and submissions that qualif... |
-| 23 | NYS DEC Grants- Hudson River Estuary | MEDIUM | 2026-08-07 | 1 | [info](https://dec.ny.gov/nature/waterbodies/oceans-estuaries/hudson-river-estuary-program/grants-funding-opportunities#:~:text=Since%201999%2C%20DEC's%20Hudson%20River,of%20habitat%20and%20natural%20resources.) [apply](https://grantsmanagement.ny.gov/) | Must be pre-qualified in SFS before app deadline |
-| 24 | New-Land Fdn, Inc. | LOW | 2026-07-01 | 0 | [info](https://newlandfoundation.org/grants/) [apply](http://newlandfoundation.org/grantseekers/) | very limited budget for new applicants |
-| 25 | Empire State Development | NO | 2026-07-31 | 0 | [info](https://esd.ny.gov/global-ny-fund-grant-program#guidelines) [apply](https://esd.ny.gov/global-ny-fund-grant-program#guidelines) |  |
-| 26 | Gould Family Fdn | NO | 2026-08-01 | 0 | [info](https://www.gouldfamilyfoundation.com/) [apply](https://www.gouldfamilyfoundation.com/grants#:~:text=Our%20grants%20are%20funded%20by,expenses%20associated%20with%20the%20Fund.) |  |
+| 6 | Florence Muller Fdn | NO | 2026-05-01 | 5 | [info](https://www.fmmullerfdn.org/) [apply](https://www.fmmullerfdn.org/grant-guidelines) | Must be within 6 NY counties (not applicable to NYC) |
+| 7 | Creative Capital | MEDIUM | 2026-04-02 | 3 | [info](https://creative-capital.org/creative-capital-award/award-application/) [apply](https://apply.creative-capital.org/#button) | Fund specific new creative works not ongoing exhibitions or programs |
+| 8 | RTX Corporation | MEDIUM | 2026-07-31 | 6 | [info](https://www.utcfoundation.org/who-we-are.html) [apply](https://www.utcfoundation.org/contact-us.html) | Must be sponsored by an RTX employee to apply |
+| 9 | Barker Welfare Foundation | MEDIUM | 2026-08-01 | 6 | [info](https://www.barkerwelfare.org/) [apply](https://www.barkerwelfare.org/funding-inquiry/) |  |
+| 10 | NBC Universal Impact Grants | HIGH, 2025 TO DO | 2026-04-15 | 1 | [info](https://www.localimpactgrants.com/) | The applying organization’s total expenses must be between $100,000 and $1,00... |
+| 11 | Tiffany & Co. Foundation | MEDIUM | 2026-05-01 | 3 | [info](https://www.tiffanyandcofoundation.org) [apply](https://www.tiffanyandcofoundation.org/how-to-apply.html) |  |
+| 12 | Sappi- Ideas That Matter | MEDIUM | 2026-07-15 | 4 | [info](https://www.sappi.com/sappi-ideas-that-matter) |  |
+| 13 | 11th Hour Racing | MEDIUM | 2026-03-31 | 1 | [info](https://11thhourracing.org/grant-giving/) [apply](https://11thhourracing.org/apply-for-a-grant/) | Mainly focused on ocean conservation efforts |
+| 14 | Robert Lehman Foundation - | MEDIUM | 2026-04-01 | 1 | [info](https://www.robertlehmanfoundation.org/) [apply](https://www.robertlehmanfoundation.org/guidelines.php) |  |
+| 15 | Samuel H. Kress Foundation | MEDIUM, Invitation Only | 2026-04-01 | 1 | [info](https://www.kressfoundation.org/Programs/Grants/History-of-Art) [apply](https://www.kressfoundation.org/Programs/Grants/Conservation) |  |
+| 16 | Prince Albert of Monaco II Foundation (HII Europe) | 2026 TO DO | 2026-03-31 | 1 | [info](https://www.fpa2.org/en/submit-a-project) [apply](https://www.fpa2.org/en/submit-a-project) | Applied in 2025; strong climate fit and should be actively followed up. |
+| 17 | NYSERDA (Dept of Labor) - Climate Justice Fellow | 2026 TO DO | 2026-06-30 | 3 | [info](https://www.nyserda.ny.gov/All-Programs/Climate-Justice-Fellowship) [apply](https://portal.nyserda.ny.gov/CORE_Solicitation_Detail_Page?SolicitationId=a0rt000001Mh9IN&_gl=1*1gejtjc*_gcl_au*ODAyMzgwODYyLjE3MzgwMTkwMDY.*_ga*MjAwNTY0NzUwNi4xNzM4MDE4Njk0*_ga_DRYJB34TXH*MTczODAxOTAwNi4xLjEuMTczODAxOTE1MS42MC4wLjA.) | Rolling admissions on first come first served Up to $40k per fellow Fellow mu... |
+| 18 | Trust for Mutual Understanding | MEDIUM | 2026-05-06 | 1 | [info](https://www.tmuny.org) [apply](https://tmuny.fluxx.io/user_sessions/new) | Do not fund youth initatives; must partner with an org in one of these countr... |
+| 19 | Foundation for Sustainability and Innovation | NO | 2026-04-15 | 0 | [info](http://fsifoundation.com/grants/) |  |
+| 20 | Awesome Foundation | LOW | 2026-03-27 | 0 | [info](https://www.awesomefoundation.org/en/about_us) [apply](https://www.awesomefoundation.org/en/submissions/new) |  |
+| 21 | Con Edison | 2026 TO DO | 2026-06-30 | 1 | [info](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) [apply](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) | Concept Paper must be submitted before April 30th and submissions that qualif... |
+| 22 | NYS DEC Grants- Hudson River Estuary | MEDIUM | 2026-08-07 | 1 | [info](https://dec.ny.gov/nature/waterbodies/oceans-estuaries/hudson-river-estuary-program/grants-funding-opportunities#:~:text=Since%201999%2C%20DEC's%20Hudson%20River,of%20habitat%20and%20natural%20resources.) [apply](https://grantsmanagement.ny.gov/) | Must be pre-qualified in SFS before app deadline |
+| 23 | New-Land Fdn, Inc. | LOW | 2026-07-01 | 0 | [info](https://newlandfoundation.org/grants/) [apply](http://newlandfoundation.org/grantseekers/) | very limited budget for new applicants |
+| 24 | Empire State Development | NO | 2026-07-31 | 0 | [info](https://esd.ny.gov/global-ny-fund-grant-program#guidelines) [apply](https://esd.ny.gov/global-ny-fund-grant-program#guidelines) |  |
+| 25 | Gould Family Fdn | NO | 2026-08-01 | 0 | [info](https://www.gouldfamilyfoundation.com/) [apply](https://www.gouldfamilyfoundation.com/grants#:~:text=Our%20grants%20are%20funded%20by,expenses%20associated%20with%20the%20Fund.) |  |
 
 ## Review / Research Priority Queue
 

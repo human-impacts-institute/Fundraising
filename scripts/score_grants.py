@@ -26,6 +26,7 @@ import csv
 import html
 import os
 import re
+import time
 from dataclasses import dataclass
 from datetime import date, datetime
 from typing import Any, Dict, List, Optional, Tuple
@@ -133,13 +134,22 @@ def read_source_url() -> str:
 
 
 def fetch_csv_to_df(url: str) -> pd.DataFrame:
-    resp = requests.get(url, timeout=30)
-    resp.raise_for_status()
-    content = resp.content.decode("utf-8", errors="replace")
     from io import StringIO
 
-    df = pd.read_csv(StringIO(content))
-    return df
+    last_err: Exception = RuntimeError("No attempts made")
+    for attempt in range(1, 4):          # up to 3 attempts
+        try:
+            resp = requests.get(url, timeout=60)
+            resp.raise_for_status()
+            content = resp.content.decode("utf-8", errors="replace")
+            return pd.read_csv(StringIO(content))
+        except Exception as exc:
+            last_err = exc
+            if attempt < 3:
+                wait = 2 ** attempt      # 2s, 4s before retries 2 and 3
+                print(f"Attempt {attempt} failed ({exc}); retrying in {wait}s…")
+                time.sleep(wait)
+    raise last_err
 
 
 def norm_str(x: Any) -> str:

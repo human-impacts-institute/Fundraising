@@ -9,7 +9,7 @@ Last refreshed: 2026-03-27
 - Funders missing websites: 15
 - Funders with at least one deadline: 45
 
-## Apply Next Queue (deadline-driven)
+## Ready to Launch
 
 | Rank | Organization | Priority | Next deadline | Programs | Links | Notes |
 | ---: | --- | --- | --- | ---: | --- | --- |
@@ -28,21 +28,17 @@ Last refreshed: 2026-03-27
 | 13 | 11th Hour Racing | MEDIUM | 2026-03-31 | 1 | [info](https://11thhourracing.org/grant-giving/) [apply](https://11thhourracing.org/apply-for-a-grant/) | Mainly focused on ocean conservation efforts |
 | 14 | Robert Lehman Foundation - | MEDIUM | 2026-04-01 | 1 | [info](https://www.robertlehmanfoundation.org/) [apply](https://www.robertlehmanfoundation.org/guidelines.php) |  |
 | 15 | Samuel H. Kress Foundation | MEDIUM, Invitation Only | 2026-04-01 | 1 | [info](https://www.kressfoundation.org/Programs/Grants/History-of-Art) [apply](https://www.kressfoundation.org/Programs/Grants/Conservation) |  |
-| 16 | NYS Department of Environmental Conservation Environmental Justice - Green Jobs for Youth | 2026 TO DO | 2026-01-28 | 7 | [info](https://dec.ny.gov/environmental-protection/environmental-justice/grant-programs) [apply](https://esupplier.sfs.ny.gov/psc/fscm/SUPPLIER/ERP/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL?&.&) | previous notes say no DEC grants currently fit HII (as of Jan/June 2025); dep... |
-| 17 | Prince Albert of Monaco II Foundation (HII Europe) | 2026 TO DO | 2026-03-31 | 1 | [info](https://www.fpa2.org/en/submit-a-project) [apply](https://www.fpa2.org/en/submit-a-project) | Applied in 2025; strong climate fit and should be actively followed up. |
-| 18 | NYSERDA (Dept of Labor) - Climate Justice Fellow | 2026 TO DO | 2026-06-30 | 3 | [info](https://www.nyserda.ny.gov/All-Programs/Climate-Justice-Fellowship) [apply](https://portal.nyserda.ny.gov/CORE_Solicitation_Detail_Page?SolicitationId=a0rt000001Mh9IN&_gl=1*1gejtjc*_gcl_au*ODAyMzgwODYyLjE3MzgwMTkwMDY.*_ga*MjAwNTY0NzUwNi4xNzM4MDE4Njk0*_ga_DRYJB34TXH*MTczODAxOTAwNi4xLjEuMTczODAxOTE1MS42MC4wLjA.) | Rolling admissions on first come first served Up to $40k per fellow Fellow mu... |
-| 19 | Trust for Mutual Understanding | MEDIUM | 2026-05-06 | 1 | [info](https://www.tmuny.org) [apply](https://tmuny.fluxx.io/user_sessions/new) | Do not fund youth initatives; must partner with an org in one of these countr... |
-| 20 | Foundation for Sustainability and Innovation | NO | 2026-04-15 | 0 | [info](http://fsifoundation.com/grants/) |  |
-| 21 | Ben & Jerry's Foundation | MEDIUM | 2026-02-25 | 5 | [info](https://benandjerrysfoundation.org/) |  |
-| 22 | Awesome Foundation | LOW | 2026-03-27 | 0 | [info](https://www.awesomefoundation.org/en/about_us) [apply](https://www.awesomefoundation.org/en/submissions/new) |  |
-| 23 | next |  | 2026-05-01 | 0 |  |  |
-| 24 | City Council Funding (Participatory Budgeting Brooklyn Districts) - Infrastructure | LOW | 2026-02-18 | 5 | [apply](https://council.nyc.gov/budget/discretionary-funding-policies-and-procedures/) |  |
-| 25 | New York City Environmental Fund at Hudson River Foundation | MEDIUM | 2026-02-13 | 4 | [info](http://www.hudsonriver.org/nycef/) [apply](https://www.hudsonriver.org/grants) |  |
-| 26 | Dominion | MEDIUM | 2026-02-20 | 4 | [info](https://www.dominionenergy.com/our-company/customers-and-community/charitable-foundation) [apply](https://www.instrumentl.com/grants/dominion-energy-foundation-grants) |  |
-| 27 | Con Edison | 2026 TO DO | 2026-06-30 | 1 | [info](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) [apply](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) | Concept Paper must be submitted before April 30th and submissions that qualif... |
-| 28 | JMG Foundation | NO | 2026-03-01 | 4 | [info](https://jmgoldmanfoundation.org/about-us/) [apply](https://jmgoldmanfoundation.org/grant-information/) |  |
-| 29 | George Gund Foundation | NO | 2026-03-15 | 4 | [info](https://gundfoundation.org/grantmaking/what-we-believe/) [apply](https://gundfoundation.org/grantmaking/apply-for-a-grant/) |  |
-| 30 | Invoking the Pause (ITP) | NO | 2026-03-15 | 4 | [info](https://invokingthepause.org/home.html) [apply](https://invokingthepause.org/climatechallengecohort.html) | Funds: accomodation, transport, stipends, childcare, facilitation for a team ... |
+| 16 | Prince Albert of Monaco II Foundation (HII Europe) | 2026 TO DO | 2026-03-31 | 1 | [info](https://www.fpa2.org/en/submit-a-project) [apply](https://www.fpa2.org/en/submit-a-project) | Applied in 2025; strong climate fit and should be actively followed up. |
+| 17 | NYSERDA (Dept of Labor) - Climate Justice Fellow | 2026 TO DO | 2026-06-30 | 3 | [info](https://www.nyserda.ny.gov/All-Programs/Climate-Justice-Fellowship) [apply](https://portal.nyserda.ny.gov/CORE_Solicitation_Detail_Page?SolicitationId=a0rt000001Mh9IN&_gl=1*1gejtjc*_gcl_au*ODAyMzgwODYyLjE3MzgwMTkwMDY.*_ga*MjAwNTY0NzUwNi4xNzM4MDE4Njk0*_ga_DRYJB34TXH*MTczODAxOTAwNi4xLjEuMTczODAxOTE1MS42MC4wLjA.) | Rolling admissions on first come first served Up to $40k per fellow Fellow mu... |
+| 18 | Trust for Mutual Understanding | MEDIUM | 2026-05-06 | 1 | [info](https://www.tmuny.org) [apply](https://tmuny.fluxx.io/user_sessions/new) | Do not fund youth initatives; must partner with an org in one of these countr... |
+| 19 | Foundation for Sustainability and Innovation | NO | 2026-04-15 | 0 | [info](http://fsifoundation.com/grants/) |  |
+| 20 | Awesome Foundation | LOW | 2026-03-27 | 0 | [info](https://www.awesomefoundation.org/en/about_us) [apply](https://www.awesomefoundation.org/en/submissions/new) |  |
+| 21 | next |  | 2026-05-01 | 0 |  |  |
+| 22 | Con Edison | 2026 TO DO | 2026-06-30 | 1 | [info](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) [apply](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) | Concept Paper must be submitted before April 30th and submissions that qualif... |
+| 23 | NYS DEC Grants- Hudson River Estuary | MEDIUM | 2026-08-07 | 1 | [info](https://dec.ny.gov/nature/waterbodies/oceans-estuaries/hudson-river-estuary-program/grants-funding-opportunities#:~:text=Since%201999%2C%20DEC's%20Hudson%20River,of%20habitat%20and%20natural%20resources.) [apply](https://grantsmanagement.ny.gov/) | Must be pre-qualified in SFS before app deadline |
+| 24 | New-Land Fdn, Inc. | LOW | 2026-07-01 | 0 | [info](https://newlandfoundation.org/grants/) [apply](http://newlandfoundation.org/grantseekers/) | very limited budget for new applicants |
+| 25 | Empire State Development | NO | 2026-07-31 | 0 | [info](https://esd.ny.gov/global-ny-fund-grant-program#guidelines) [apply](https://esd.ny.gov/global-ny-fund-grant-program#guidelines) |  |
+| 26 | Gould Family Fdn | NO | 2026-08-01 | 0 | [info](https://www.gouldfamilyfoundation.com/) [apply](https://www.gouldfamilyfoundation.com/grants#:~:text=Our%20grants%20are%20funded%20by,expenses%20associated%20with%20the%20Fund.) |  |
 
 ## Review / Research Priority Queue
 

@@ -19,9 +19,9 @@ Strategic view of funding opportunities, split into two action queues: research 
 <div class="card"><div class="card-label">Missing links</div><div class="card-value">14</div></div>
 <div class="card"><div class="card-label">With deadlines</div><div class="card-value">44</div></div>
 </div>
-<h2 class="queue-title">Apply Next Queue (deadline-driven)</h2>
+<h2 class="queue-title queue-title--apply">Apply Next Queue (deadline-driven)</h2>
 <div class="table-wrap">
-<table class="dashboard-table">
+<table class="dashboard-table dashboard-table--apply">
 <thead><tr><th class="col-rank">Rank</th><th>Organization</th><th>Priority</th><th class="col-deadline">LOI</th><th class="col-deadline">Apply by</th><th class="col-days">Days left</th><th class="col-programs">Programs</th><th>Links</th><th>Notes</th></tr></thead>
 <tbody>
 <tr class="priority-high"><td class="col-rank">1</td><td class="col-org">Lily Auchinloss Foundation</td><td class="col-priority">HIGH</td><td class="col-deadline"><span class="no-deadline">—</span></td><td class="col-deadline">Apr 15, 2026</td><td class="col-days" data-deadline="2026-04-15"></td><td class="col-programs">7</td><td class="col-links"><a href="https://lilynyc.org/cycles-deadlines/" target="_blank" rel="noopener">info</a> <a href="https://lilynyc.org/types-of-grants/" target="_blank" rel="noopener">apply</a></td><td class="col-notes">Environmental/Preservation Grant opens march 15 and might be a good opportunity for HII (Robine 01/22/26)</td></tr>

@@ -1,0 +1,9 @@
+# Auto-generated dashboard outputs — only committed by GitHub Actions on main
+dashboards/grants_dashboard.md
+data/scored_grants.csv
+docs/index.md
+
+# Python
+__pycache__/
+*.pyc
+.env

@@ -230,3 +230,150 @@ main, .markdown-body {
     font-size: 0.9rem;
   }
 }
+
+/* --- Deadline countdown cells --- */
+.col-days {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.deadline-red {
+  color: var(--hii-red);
+}
+
+.deadline-overdue {
+  color: var(--hii-red);
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.deadline-orange {
+  color: #c47a00;
+}
+
+.deadline-green {
+  color: #2a7a3b;
+}
+
+.no-deadline {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* --- Quick-add grant form --- */
+.grant-add-section {
+  margin: 0 0 24px;
+}
+
+.grant-add-toggle {
+  background: none;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--hii-dark-blue);
+  cursor: pointer;
+  font-family: "Space Grotesk", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.grant-add-toggle:hover {
+  background: rgba(153, 216, 209, 0.15);
+  border-color: var(--hii-turquoise);
+}
+
+.grant-add-form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(22, 29, 60, 0.08);
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 10px;
+  padding: 20px 22px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-row--full {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  grid-column: 1 / -1;
+}
+
+.grant-add-form label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.form-required {
+  color: var(--hii-red);
+}
+
+.grant-add-form input,
+.grant-add-form select,
+.grant-add-form textarea {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: var(--ink);
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.95rem;
+  padding: 7px 10px;
+  transition: border-color 120ms ease;
+  width: 100%;
+}
+
+.grant-add-form input:focus,
+.grant-add-form select:focus,
+.grant-add-form textarea:focus {
+  border-color: var(--hii-turquoise);
+  outline: none;
+}
+
+.form-submit {
+  background: var(--hii-dark-blue);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Space Grotesk", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  transition: opacity 120ms ease;
+}
+
+.form-submit:hover { opacity: 0.85; }
+.form-submit[disabled] { cursor: not-allowed; opacity: 0.55; }
+
+.form-status { font-size: 0.9rem; }
+.form-status--success { color: #2a7a3b; font-weight: 600; }
+.form-status--error   { color: var(--hii-red); font-weight: 600; }
+
+@media (max-width: 640px) {
+  .grant-add-form {
+    grid-template-columns: 1fr;
+    padding: 14px 16px;
+  }
+}

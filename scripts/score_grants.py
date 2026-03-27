@@ -453,6 +453,95 @@ def render_table_html(rows: List[Dict[str, Any]], title: str, max_rows: int = 25
     return "\n".join(lines)
 
 
+def render_apply_table_html(rows: List[Dict[str, Any]], title: str, max_rows: int = 25) -> str:
+    """Like render_table_html but with separate LOI/Apply by columns and a live countdown cell."""
+    lines: List[str] = []
+    lines.append(f'<h2 class="queue-title">{html.escape(title)}</h2>')
+    lines.append('<div class="table-wrap">')
+    lines.append('<table class="dashboard-table">')
+    lines.append(
+        "<thead><tr>"
+        "<th class=\"col-rank\">Rank</th>"
+        "<th>Organization</th>"
+        "<th>Priority</th>"
+        "<th class=\"col-deadline\">LOI</th>"
+        "<th class=\"col-deadline\">Apply by</th>"
+        "<th class=\"col-days\">Days left</th>"
+        "<th class=\"col-programs\">Programs</th>"
+        "<th>Links</th>"
+        "<th>Notes</th>"
+        "</tr></thead>"
+    )
+    lines.append("<tbody>")
+
+    def iso_to_short(iso_str: str) -> str:
+        if not iso_str:
+            return '<span class="no-deadline">—</span>'
+        try:
+            d = date.fromisoformat(iso_str)
+            return html.escape(d.strftime("%b %-d, %Y"))
+        except ValueError:
+            return html.escape(iso_str)
+
+    for i, r in enumerate(rows[:max_rows], start=1):
+        org   = html.escape(norm_str(r.get(COL_ORG, "")))
+        pri   = html.escape(norm_str(r.get(COL_PRIORITY, "")))
+        pm    = html.escape(str(r.get("Program Matches", 0)))
+        notes = norm_str(r.get(COL_NOTES, ""))
+        notes = re.sub(r"\s+", " ", notes).strip()
+        if len(notes) > 120:
+            notes = notes[:117] + "..."
+        notes = html.escape(notes)
+
+        loi_iso = norm_str(r.get("LOI Date ISO", ""))
+        app_iso = norm_str(r.get("App Date ISO", ""))
+
+        loi_display = iso_to_short(loi_iso)
+        app_display = iso_to_short(app_iso)
+
+        candidates = [d for d in [loi_iso, app_iso] if d]
+        next_iso = min(candidates) if candidates else ""
+        days_attr = f' data-deadline="{html.escape(next_iso)}"' if next_iso else ""
+
+        info_site = safe_url(r.get(COL_INFO_SITE, ""))
+        app_site  = safe_url(r.get(COL_APP_SITE, ""))
+        link_bits: List[str] = []
+        if info_site:
+            link_bits.append(f'<a href="{html.escape(info_site)}" target="_blank" rel="noopener">info</a>')
+        if app_site:
+            link_bits.append(f'<a href="{html.escape(app_site)}" target="_blank" rel="noopener">apply</a>')
+        links_html = " ".join(link_bits)
+
+        badges = build_badges(
+            bool(r.get("Missing Deadlines", False)),
+            bool(r.get("Missing Sites", False)),
+        )
+        if badges:
+            notes = f"{badges} {notes}".strip()
+
+        row_class = priority_class(pri)
+        lines.append(
+            "<tr class=\"{rc}\">"
+            "<td class=\"col-rank\">{rank}</td>"
+            "<td class=\"col-org\">{org}</td>"
+            "<td class=\"col-priority\">{pri}</td>"
+            "<td class=\"col-deadline\">{loi}</td>"
+            "<td class=\"col-deadline\">{app}</td>"
+            "<td class=\"col-days\"{dattr}></td>"
+            "<td class=\"col-programs\">{pm}</td>"
+            "<td class=\"col-links\">{links}</td>"
+            "<td class=\"col-notes\">{notes}</td>"
+            "</tr>".format(
+                rc=row_class, rank=i, org=org, pri=pri,
+                loi=loi_display, app=app_display, dattr=days_attr,
+                pm=pm, links=links_html, notes=notes,
+            )
+        )
+
+    lines.append("</tbody></table></div>")
+    return "\n".join(lines)
+
+
 def build_dashboard_section_md(df: pd.DataFrame) -> str:
     today = date.today().isoformat()
 
@@ -522,8 +611,50 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
     )
     lines.append("</div>")
 
+    lines.append("""
+<div class="grant-add-section">
+  <button class="grant-add-toggle" type="button" aria-expanded="false" aria-controls="grant-add-form">+ Add a grant funder</button>
+  <form id="grant-add-form" class="grant-add-form" hidden aria-label="Add a grant funder">
+    <div class="form-row">
+      <label for="ga-org">Organization name <span class="form-required">*</span></label>
+      <input id="ga-org" name="org" type="text" required placeholder="e.g. Ford Foundation" autocomplete="organization">
+    </div>
+    <div class="form-row">
+      <label for="ga-info-url">Information website</label>
+      <input id="ga-info-url" name="infoUrl" type="url" placeholder="https://...">
+    </div>
+    <div class="form-row">
+      <label for="ga-app-deadline">Application deadline (MM/DD/YYYY)</label>
+      <input id="ga-app-deadline" name="appDeadline" type="text" placeholder="03/31/2027" pattern="\\d{1,2}/\\d{1,2}/\\d{4}">
+    </div>
+    <div class="form-row">
+      <label for="ga-loi-deadline">LOI deadline (MM/DD/YYYY)</label>
+      <input id="ga-loi-deadline" name="loiDeadline" type="text" placeholder="02/15/2027" pattern="\\d{1,2}/\\d{1,2}/\\d{4}">
+    </div>
+    <div class="form-row">
+      <label for="ga-priority">Priority</label>
+      <select id="ga-priority" name="priority">
+        <option value="">-- select --</option>
+        <option value="HIGH">HIGH</option>
+        <option value="MEDIUM">MEDIUM</option>
+        <option value="LOW">LOW</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="form-row form-row--full">
+      <label for="ga-notes">Notes</label>
+      <textarea id="ga-notes" name="notes" rows="3" placeholder="Any relevant context..."></textarea>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="form-submit">Add funder</button>
+      <span class="form-status" aria-live="polite"></span>
+    </div>
+  </form>
+</div>
+""")
+
     lines.append(render_table_html(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
-    lines.append(render_table_html(apply_next.to_dict(orient="records"), "Apply Next Queue (deadline-driven)", 30))
+    lines.append(render_apply_table_html(apply_next.to_dict(orient="records"), "Apply Next Queue (deadline-driven)", 30))
     lines.append("</section>")
     return "\n".join(lines).strip() + "\n"
 
@@ -587,6 +718,8 @@ def main() -> None:
     df["Next Deadline"] = [fmt_date(d) if d else "" for d in next_deadlines]
     df["Missing Deadlines"] = missing_deadlines_list
     df["Missing Sites"] = missing_sites_list
+    df["LOI Date ISO"] = [fmt_date(parse_date_mmddyyyy(v)) for v in df[COL_LOI]]
+    df["App Date ISO"] = [fmt_date(parse_date_mmddyyyy(v)) for v in df[COL_APP]]
 
     # Write outputs
     write_dashboard(df)

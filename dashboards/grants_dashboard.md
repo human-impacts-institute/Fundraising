@@ -1,6 +1,6 @@
 # Grants Dashboard
 
-Last refreshed: 2026-03-26
+Last refreshed: 2026-03-27
 
 ### Snapshot
 
@@ -8,41 +8,6 @@ Last refreshed: 2026-03-26
 - Funders missing both deadlines: 273
 - Funders missing websites: 14
 - Funders with at least one deadline: 44
-
-## Review / Research Priority Queue
-
-| Rank | Organization | Priority | Next deadline | Programs | Links | Notes |
-| ---: | --- | --- | --- | ---: | --- | --- |
-| 1 | H&M | HIGH |  | 7 | [info](https://hmfoundation.com/) |  |
-| 2 | Charles Hayden Foundation | HIGH |  | 7 | [info](https://charleshaydenfoundation.org/current-grants/) [apply](https://us.grantrequest.com/Login.aspx?ReturnUrl=%2fapplication.aspx%3fSA%3dSNA%26FID%3d35002%26sid%3d2345&SA=SNA&FID=35002&sid=2345) |  |
-| 3 | IOBY (crowd funding) | MEDIUM |  | 7 | [info](https://ioby.org/resources/closing/) |  |
-| 4 | NYC Venture Philanthropy Fund | NO |  | 8 | [info](https://philanthropynewyork.org/redhen/org/113) [apply](https://philanthropynewyork.org/search?keys=grants) |  |
-| 5 | Wege Foundation | NO |  | 7 | [info](https://wegefoundation.com/grants/) [apply](https://wegefoundation.com/wp-content/uploads/2022/12/Sample-Online-Application-Form-2022-12-16.pdf) |  |
-| 6 | Lily Auchinloss Foundation | HIGH | 2026-04-15 | 7 | [info](https://lilynyc.org/cycles-deadlines/) [apply](https://lilynyc.org/types-of-grants/) | Environmental/Preservation Grant opens march 15 and might be a good opportuni... |
-| 7 | Constellation Energy Group Foundation | LOW |  | 6 | [info](https://www.constellationenergy.com/our-esg-principles/community/community-champions.html) [apply](https://www.cybergrants.com/pls/cybergrants/ao_login.login?x_gm_id=9474&x_proposal_type_id=78824) |  |
-| 8 | Environmental Media Fund | LOW |  | 6 | [info](https://www.environmentalmediafund.org/Home.aspx) [apply](https://www.environmentalmediafund.org/Page.aspx?PageID=33) |  |
-| 9 | Andrew W. Mellon Foundation | HIGH |  | 4 | [info](https://www.mellon.org/) [apply](https://www.mellon.org/resources) | They are currently taking applications on a rolling basis for "Funding Inquir... |
-| 10 | The Chanel Foundation | HIGH, 2025 TO DO |  | 1 | [info](https://www.fondationchanel.org/en/) | No clear open/upcoming opportunities; may be worth relationship outreach (gen... |
-| 11 | Jet Blue | LOW |  | 6 | [info](https://jetbluefoundation.org/) [apply](https://jetbluefoundation.org/programs) |  |
-| 12 | Dr. Robert C. and Tina Sohn Foundation | MEDIUM |  | 7 | [info](http://www.sohnfoundation.org/Grant_guidelines1.htm) [apply](http://www.sohnfoundation.org/Grant_application.htm) |  |
-| 13 | Fordham University Flourishing In Community Grants | HIGH |  | 3 | [info](https://www.fordham.edu/about/living-the-mission/thriving-communities/application/) [apply](https://drive.google.com/drive/folders/1ByN-uR7arBN7SFVpnBxTwVcohnH31BVT) |  |
-| 14 | Gordon & Betty Moore Foundation | HIGH |  | 3 | [info](https://www.moore.org/) [apply](https://www.moore.org/grants) | The latest grants they have posted on their website are form november 2025 an... |
-| 15 | North Face Explore Fund | NO |  | 4 | [info](https://www.thenorthface.com/en-us/about-us/outdoor-exploration/about-the-explore-fund) |  |
-| 16 | Rauschenberg Foundation | NO |  | 4 | [info](https://www.rauschenbergfoundation.org/programs/grants) |  |
-| 17 | Shelley & Donald Rubin Foundation | NO |  | 4 | [info](https://www.sdrubin.org/our-board-and-staff-1) |  |
-| 18 | Simmons Family Foundation | LOW |  | 5 | [info](http://simmonsfoundation.org) [apply](http://simmonsfoundation.org/id4.html) |  |
-| 19 | US State Department | LOW |  | 5 | [info](https://www.state.gov/grants-process-overview/) [apply](https://www.grants.gov/applicants/grant-applications/how-to-apply-for-grants) |  |
-| 20 | National Endowment for the Arts | NO |  | 5 | [info](https://www.arts.gov/grants) |  |
-| 21 | Pratt Industries | HIGH |  | 1 | [info](https://www.prattindustries.com/latest-news/category/philanthropy/) |  |
-| 22 | Earthwatch Institute | LOW |  | 4 | [info](http://earthwatch.org/) [apply](https://earthwatch.org/partnerships/grants-and-foundations) |  |
-| 23 | Pinkerton Foundation | LOW, LOI |  | 6 | [info](http://www.thepinkertonfoundation.org/grant-guidelines) [apply](https://pinkerton.fluxx.io/user_sessions/new) |  |
-| 24 | William and Flora Hewlett Foundation | MEDIUM |  | 6 | [info](https://hewlett.org/programs/environment/) [apply](https://hewlett.smapply.io) |  |
-| 25 | NY Community Trust | 2026 TO DO |  | 7 | [info](https://thenytrust.org/grant-funding/environment-nyc/) [apply](https://grantseeker.thenytrust.org/) | Rolling admissions Typically do not fund environmental education programs |
-| 26 | Climate Emergency Fund | HIGH |  | 2 | [info](https://www.climateemergencyfund.org/apply) [apply](https://webportalapp.com/sp/login/cef_application) | They don't fund organizations that don't utilize disruptive protest or art in... |
-| 27 | Rockefeller Brothers Fund | HIGH |  | 2 | [info](https://www.rbf.org/grants/for-grant-seekers) [apply](https://rbf.givingdata.com/portal/campaign/programapp?panelMode=signIn) | arts/culture window closed for 2025; possible to reapply in 2026 but unsolici... |
-| 28 | Kresge Foundation | NO |  | 7 | [info](https://kresge.org/grants-social-investments/current-funding-opportunities/) [apply](https://kresge.org/grants-social-investments/how-to-apply/) |  |
-| 29 | Alaska Venture Fund |  |  | 0 |  |  |
-| 30 | Biodiversity Funders Group |  |  | 0 |  |  |
 
 ## Apply Next Queue (deadline-driven)
 
@@ -78,3 +43,38 @@ Last refreshed: 2026-03-26
 | 28 | George Gund Foundation | NO | 2026-03-15 | 4 | [info](https://gundfoundation.org/grantmaking/what-we-believe/) [apply](https://gundfoundation.org/grantmaking/apply-for-a-grant/) |  |
 | 29 | Invoking the Pause (ITP) | NO | 2026-03-15 | 4 | [info](https://invokingthepause.org/home.html) [apply](https://invokingthepause.org/climatechallengecohort.html) | Funds: accomodation, transport, stipends, childcare, facilitation for a team ... |
 | 30 | NYS DEC Grants- Hudson River Estuary | MEDIUM | 2026-08-07 | 1 | [info](https://dec.ny.gov/nature/waterbodies/oceans-estuaries/hudson-river-estuary-program/grants-funding-opportunities#:~:text=Since%201999%2C%20DEC's%20Hudson%20River,of%20habitat%20and%20natural%20resources.) [apply](https://grantsmanagement.ny.gov/) | Must be pre-qualified in SFS before app deadline |
+
+## Review / Research Priority Queue
+
+| Rank | Organization | Priority | Next deadline | Programs | Links | Notes |
+| ---: | --- | --- | --- | ---: | --- | --- |
+| 1 | H&M | HIGH |  | 7 | [info](https://hmfoundation.com/) |  |
+| 2 | Charles Hayden Foundation | HIGH |  | 7 | [info](https://charleshaydenfoundation.org/current-grants/) [apply](https://us.grantrequest.com/Login.aspx?ReturnUrl=%2fapplication.aspx%3fSA%3dSNA%26FID%3d35002%26sid%3d2345&SA=SNA&FID=35002&sid=2345) |  |
+| 3 | IOBY (crowd funding) | MEDIUM |  | 7 | [info](https://ioby.org/resources/closing/) |  |
+| 4 | NYC Venture Philanthropy Fund | NO |  | 8 | [info](https://philanthropynewyork.org/redhen/org/113) [apply](https://philanthropynewyork.org/search?keys=grants) |  |
+| 5 | Wege Foundation | NO |  | 7 | [info](https://wegefoundation.com/grants/) [apply](https://wegefoundation.com/wp-content/uploads/2022/12/Sample-Online-Application-Form-2022-12-16.pdf) |  |
+| 6 | Lily Auchinloss Foundation | HIGH | 2026-04-15 | 7 | [info](https://lilynyc.org/cycles-deadlines/) [apply](https://lilynyc.org/types-of-grants/) | Environmental/Preservation Grant opens march 15 and might be a good opportuni... |
+| 7 | Constellation Energy Group Foundation | LOW |  | 6 | [info](https://www.constellationenergy.com/our-esg-principles/community/community-champions.html) [apply](https://www.cybergrants.com/pls/cybergrants/ao_login.login?x_gm_id=9474&x_proposal_type_id=78824) |  |
+| 8 | Environmental Media Fund | LOW |  | 6 | [info](https://www.environmentalmediafund.org/Home.aspx) [apply](https://www.environmentalmediafund.org/Page.aspx?PageID=33) |  |
+| 9 | Andrew W. Mellon Foundation | HIGH |  | 4 | [info](https://www.mellon.org/) [apply](https://www.mellon.org/resources) | They are currently taking applications on a rolling basis for "Funding Inquir... |
+| 10 | The Chanel Foundation | HIGH, 2025 TO DO |  | 1 | [info](https://www.fondationchanel.org/en/) | No clear open/upcoming opportunities; may be worth relationship outreach (gen... |
+| 11 | Jet Blue | LOW |  | 6 | [info](https://jetbluefoundation.org/) [apply](https://jetbluefoundation.org/programs) |  |
+| 12 | Dr. Robert C. and Tina Sohn Foundation | MEDIUM |  | 7 | [info](http://www.sohnfoundation.org/Grant_guidelines1.htm) [apply](http://www.sohnfoundation.org/Grant_application.htm) |  |
+| 13 | Fordham University Flourishing In Community Grants | HIGH |  | 3 | [info](https://www.fordham.edu/about/living-the-mission/thriving-communities/application/) [apply](https://drive.google.com/drive/folders/1ByN-uR7arBN7SFVpnBxTwVcohnH31BVT) |  |
+| 14 | Gordon & Betty Moore Foundation | HIGH |  | 3 | [info](https://www.moore.org/) [apply](https://www.moore.org/grants) | The latest grants they have posted on their website are form november 2025 an... |
+| 15 | North Face Explore Fund | NO |  | 4 | [info](https://www.thenorthface.com/en-us/about-us/outdoor-exploration/about-the-explore-fund) |  |
+| 16 | Rauschenberg Foundation | NO |  | 4 | [info](https://www.rauschenbergfoundation.org/programs/grants) |  |
+| 17 | Shelley & Donald Rubin Foundation | NO |  | 4 | [info](https://www.sdrubin.org/our-board-and-staff-1) |  |
+| 18 | Simmons Family Foundation | LOW |  | 5 | [info](http://simmonsfoundation.org) [apply](http://simmonsfoundation.org/id4.html) |  |
+| 19 | US State Department | LOW |  | 5 | [info](https://www.state.gov/grants-process-overview/) [apply](https://www.grants.gov/applicants/grant-applications/how-to-apply-for-grants) |  |
+| 20 | National Endowment for the Arts | NO |  | 5 | [info](https://www.arts.gov/grants) |  |
+| 21 | Pratt Industries | HIGH |  | 1 | [info](https://www.prattindustries.com/latest-news/category/philanthropy/) |  |
+| 22 | Earthwatch Institute | LOW |  | 4 | [info](http://earthwatch.org/) [apply](https://earthwatch.org/partnerships/grants-and-foundations) |  |
+| 23 | Pinkerton Foundation | LOW, LOI |  | 6 | [info](http://www.thepinkertonfoundation.org/grant-guidelines) [apply](https://pinkerton.fluxx.io/user_sessions/new) |  |
+| 24 | William and Flora Hewlett Foundation | MEDIUM |  | 6 | [info](https://hewlett.org/programs/environment/) [apply](https://hewlett.smapply.io) |  |
+| 25 | NY Community Trust | 2026 TO DO |  | 7 | [info](https://thenytrust.org/grant-funding/environment-nyc/) [apply](https://grantseeker.thenytrust.org/) | Rolling admissions Typically do not fund environmental education programs |
+| 26 | Climate Emergency Fund | HIGH |  | 2 | [info](https://www.climateemergencyfund.org/apply) [apply](https://webportalapp.com/sp/login/cef_application) | They don't fund organizations that don't utilize disruptive protest or art in... |
+| 27 | Rockefeller Brothers Fund | HIGH |  | 2 | [info](https://www.rbf.org/grants/for-grant-seekers) [apply](https://rbf.givingdata.com/portal/campaign/programapp?panelMode=signIn) | arts/culture window closed for 2025; possible to reapply in 2026 but unsolici... |
+| 28 | Kresge Foundation | NO |  | 7 | [info](https://kresge.org/grants-social-investments/current-funding-opportunities/) [apply](https://kresge.org/grants-social-investments/how-to-apply/) |  |
+| 29 | Alaska Venture Fund |  |  | 0 |  |  |
+| 30 | Biodiversity Funders Group |  |  | 0 |  |  |

@@ -26,6 +26,8 @@ import csv
 import html
 import os
 import re
+import time
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 from dataclasses import dataclass
 from datetime import date, datetime
 from typing import Any, Dict, List, Optional, Tuple
@@ -132,8 +134,20 @@ def read_source_url() -> str:
     return url
 
 
+def add_cache_buster(url: str) -> str:
+    parsed = urlparse(url)
+    query = dict(parse_qsl(parsed.query, keep_blank_values=True))
+    query["_ts"] = str(int(time.time()))
+    return urlunparse(parsed._replace(query=urlencode(query)))
+
+
 def fetch_csv_to_df(url: str) -> pd.DataFrame:
-    resp = requests.get(url, timeout=30)
+    cache_busted = add_cache_buster(url)
+    resp = requests.get(
+        cache_busted,
+        timeout=30,
+        headers={"Cache-Control": "no-cache", "Pragma": "no-cache"},
+    )
     resp.raise_for_status()
     content = resp.content.decode("utf-8", errors="replace")
     from io import StringIO
@@ -604,7 +618,7 @@ def build_dashboard_section_md(df: pd.DataFrame) -> str:
     md.append(f"- Funders with at least one deadline: {have_deadlines}")
     md.append("")
 
-    md.append(render_table_md(apply_next.to_dict(orient="records"), "Ready to Launch", 30))
+    md.append(render_table_md(apply_next.to_dict(orient="records"), "On Deck", 30))
     md.append("")
     md.append(render_table_md(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
     return "\n".join(md).strip() + "\n"
@@ -653,7 +667,7 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
     lines.append("</div>")
 
 
-    lines.append(render_apply_table_html(apply_next.to_dict(orient="records"), "Ready to Launch", 30))
+    lines.append(render_apply_table_html(apply_next.to_dict(orient="records"), "On Deck", 30))
     lines.append(render_table_html(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
     lines.append("</section>")
     return "\n".join(lines).strip() + "\n"

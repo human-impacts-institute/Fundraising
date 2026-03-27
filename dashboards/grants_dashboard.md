@@ -4,10 +4,10 @@ Last refreshed: 2026-03-27
 
 ### Snapshot
 
-- Total funders: 317
+- Total funders: 318
 - Funders missing both deadlines: 273
-- Funders missing websites: 14
-- Funders with at least one deadline: 44
+- Funders missing websites: 15
+- Funders with at least one deadline: 45
 
 ## Apply Next Queue (deadline-driven)
 
@@ -35,14 +35,14 @@ Last refreshed: 2026-03-27
 | 20 | Foundation for Sustainability and Innovation | NO | 2026-04-15 | 0 | [info](http://fsifoundation.com/grants/) |  |
 | 21 | Ben & Jerry's Foundation | MEDIUM | 2026-02-25 | 5 | [info](https://benandjerrysfoundation.org/) |  |
 | 22 | Awesome Foundation | LOW | 2026-03-27 | 0 | [info](https://www.awesomefoundation.org/en/about_us) [apply](https://www.awesomefoundation.org/en/submissions/new) |  |
-| 23 | City Council Funding (Participatory Budgeting Brooklyn Districts) - Infrastructure | LOW | 2026-02-18 | 5 | [apply](https://council.nyc.gov/budget/discretionary-funding-policies-and-procedures/) |  |
-| 24 | New York City Environmental Fund at Hudson River Foundation | MEDIUM | 2026-02-13 | 4 | [info](http://www.hudsonriver.org/nycef/) [apply](https://www.hudsonriver.org/grants) |  |
-| 25 | Dominion | MEDIUM | 2026-02-20 | 4 | [info](https://www.dominionenergy.com/our-company/customers-and-community/charitable-foundation) [apply](https://www.instrumentl.com/grants/dominion-energy-foundation-grants) |  |
-| 26 | Con Edison | 2026 TO DO | 2026-06-30 | 1 | [info](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) [apply](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) | Concept Paper must be submitted before April 30th and submissions that qualif... |
-| 27 | JMG Foundation | NO | 2026-03-01 | 4 | [info](https://jmgoldmanfoundation.org/about-us/) [apply](https://jmgoldmanfoundation.org/grant-information/) |  |
-| 28 | George Gund Foundation | NO | 2026-03-15 | 4 | [info](https://gundfoundation.org/grantmaking/what-we-believe/) [apply](https://gundfoundation.org/grantmaking/apply-for-a-grant/) |  |
-| 29 | Invoking the Pause (ITP) | NO | 2026-03-15 | 4 | [info](https://invokingthepause.org/home.html) [apply](https://invokingthepause.org/climatechallengecohort.html) | Funds: accomodation, transport, stipends, childcare, facilitation for a team ... |
-| 30 | NYS DEC Grants- Hudson River Estuary | MEDIUM | 2026-08-07 | 1 | [info](https://dec.ny.gov/nature/waterbodies/oceans-estuaries/hudson-river-estuary-program/grants-funding-opportunities#:~:text=Since%201999%2C%20DEC's%20Hudson%20River,of%20habitat%20and%20natural%20resources.) [apply](https://grantsmanagement.ny.gov/) | Must be pre-qualified in SFS before app deadline |
+| 23 | next |  | 2026-05-01 | 0 |  |  |
+| 24 | City Council Funding (Participatory Budgeting Brooklyn Districts) - Infrastructure | LOW | 2026-02-18 | 5 | [apply](https://council.nyc.gov/budget/discretionary-funding-policies-and-procedures/) |  |
+| 25 | New York City Environmental Fund at Hudson River Foundation | MEDIUM | 2026-02-13 | 4 | [info](http://www.hudsonriver.org/nycef/) [apply](https://www.hudsonriver.org/grants) |  |
+| 26 | Dominion | MEDIUM | 2026-02-20 | 4 | [info](https://www.dominionenergy.com/our-company/customers-and-community/charitable-foundation) [apply](https://www.instrumentl.com/grants/dominion-energy-foundation-grants) |  |
+| 27 | Con Edison | 2026 TO DO | 2026-06-30 | 1 | [info](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) [apply](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) | Concept Paper must be submitted before April 30th and submissions that qualif... |
+| 28 | JMG Foundation | NO | 2026-03-01 | 4 | [info](https://jmgoldmanfoundation.org/about-us/) [apply](https://jmgoldmanfoundation.org/grant-information/) |  |
+| 29 | George Gund Foundation | NO | 2026-03-15 | 4 | [info](https://gundfoundation.org/grantmaking/what-we-believe/) [apply](https://gundfoundation.org/grantmaking/apply-for-a-grant/) |  |
+| 30 | Invoking the Pause (ITP) | NO | 2026-03-15 | 4 | [info](https://invokingthepause.org/home.html) [apply](https://invokingthepause.org/climatechallengecohort.html) | Funds: accomodation, transport, stipends, childcare, facilitation for a team ... |
 
 ## Review / Research Priority Queue
 

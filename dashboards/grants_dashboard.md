@@ -4,10 +4,10 @@ Last refreshed: 2026-03-27
 
 ### Snapshot
 
-- Total funders: 318
+- Total funders: 317
 - Funders missing both deadlines: 273
-- Funders missing websites: 15
-- Funders with at least one deadline: 45
+- Funders missing websites: 14
+- Funders with at least one deadline: 44
 
 ## On Deck
 
@@ -35,10 +35,9 @@ Last refreshed: 2026-03-27
 | 20 | Awesome Foundation | LOW | 2026-03-27 | 0 | [info](https://www.awesomefoundation.org/en/about_us) [apply](https://www.awesomefoundation.org/en/submissions/new) |  |
 | 21 | Con Edison | 2026 TO DO | 2026-06-30 | 1 | [info](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) [apply](https://www.coned.com/en/community-affairs/strategic-partnerships/apply-for-a-grant) | Concept Paper must be submitted before April 30th and submissions that qualif... |
 | 22 | NYS DEC Grants- Hudson River Estuary | MEDIUM | 2026-08-07 | 1 | [info](https://dec.ny.gov/nature/waterbodies/oceans-estuaries/hudson-river-estuary-program/grants-funding-opportunities#:~:text=Since%201999%2C%20DEC's%20Hudson%20River,of%20habitat%20and%20natural%20resources.) [apply](https://grantsmanagement.ny.gov/) | Must be pre-qualified in SFS before app deadline |
-| 23 | TEST #2 |  | 2026-06-04 | 0 |  |  |
-| 24 | New-Land Fdn, Inc. | LOW | 2026-07-01 | 0 | [info](https://newlandfoundation.org/grants/) [apply](http://newlandfoundation.org/grantseekers/) | very limited budget for new applicants |
-| 25 | Empire State Development | NO | 2026-07-31 | 0 | [info](https://esd.ny.gov/global-ny-fund-grant-program#guidelines) [apply](https://esd.ny.gov/global-ny-fund-grant-program#guidelines) |  |
-| 26 | Gould Family Fdn | NO | 2026-08-01 | 0 | [info](https://www.gouldfamilyfoundation.com/) [apply](https://www.gouldfamilyfoundation.com/grants#:~:text=Our%20grants%20are%20funded%20by,expenses%20associated%20with%20the%20Fund.) |  |
+| 23 | New-Land Fdn, Inc. | LOW | 2026-07-01 | 0 | [info](https://newlandfoundation.org/grants/) [apply](http://newlandfoundation.org/grantseekers/) | very limited budget for new applicants |
+| 24 | Empire State Development | NO | 2026-07-31 | 0 | [info](https://esd.ny.gov/global-ny-fund-grant-program#guidelines) [apply](https://esd.ny.gov/global-ny-fund-grant-program#guidelines) |  |
+| 25 | Gould Family Fdn | NO | 2026-08-01 | 0 | [info](https://www.gouldfamilyfoundation.com/) [apply](https://www.gouldfamilyfoundation.com/grants#:~:text=Our%20grants%20are%20funded%20by,expenses%20associated%20with%20the%20Fund.) |  |
 
 ## Review / Research Priority Queue
 

@@ -67,9 +67,42 @@ SOURCE_URL_FILE = os.path.join("data", "source_url.txt")
 SOURCE_URL_ENV = "SOURCE_URL"
 DASHBOARD_PATH = os.path.join("dashboards", "grants_dashboard.md")
 SCORED_CSV_PATH = os.path.join("data", "scored_grants.csv")
-DOCS_DASHBOARD_PATH = os.path.join("docs", "index.md")
-DOCS_MARKER_START = "<!-- DASHBOARD:START -->"
-DOCS_MARKER_END = "<!-- DASHBOARD:END -->"
+DOCS_DASHBOARD_PATH = os.path.join("docs", "index.html")
+
+HTML_TEMPLATE = """\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HII Grants Dashboard</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script defer src="assets/auth.js"></script>
+  <script defer src="assets/refresh-config.js"></script>
+  <script defer src="assets/refresh.js"></script>
+  <script defer src="assets/dashboard.js"></script>
+</head>
+<body>
+  <div id="auth-gate" class="auth-gate">
+    <div class="auth-card">
+      <div class="auth-logo">HII</div>
+      <h1 class="auth-title">Grants Dashboard</h1>
+      <p class="auth-desc">Sign in with your <strong>@humanimpactsinstitute.org</strong> account to continue.</p>
+      <button class="auth-btn" id="auth-login-btn">Sign in</button>
+      <p id="auth-error" class="auth-error" hidden></p>
+    </div>
+  </div>
+  <div id="auth-content" hidden>
+    <main>
+      <h1>Grants Dashboard</h1>
+      <p>Strategic view of funding opportunities, split into two action queues: research and apply.</p>
+      {dashboard}
+    </main>
+  </div>
+</body>
+</html>
+"""
 
 
 # ----------------------------
@@ -621,27 +654,14 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
 def write_dashboard(df: pd.DataFrame) -> None:
     section_md = build_dashboard_section_md(df)
     section_html = build_dashboard_section_html(df)
-    full_md = "# Grants Dashboard\n\n" + section_md
 
+    os.makedirs("dashboards", exist_ok=True)
     with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
-        f.write(full_md)
+        f.write("# Grants Dashboard\n\n" + section_md)
 
-    if os.path.exists(DOCS_DASHBOARD_PATH):
-        with open(DOCS_DASHBOARD_PATH, "r", encoding="utf-8") as f:
-            content = f.read()
-
-        if DOCS_MARKER_START not in content or DOCS_MARKER_END not in content:
-            raise ValueError(
-                f"Missing dashboard markers in {DOCS_DASHBOARD_PATH}. "
-                f"Add {DOCS_MARKER_START} and {DOCS_MARKER_END} to enable auto-updates."
-            )
-
-        before, rest = content.split(DOCS_MARKER_START, 1)
-        _, after = rest.split(DOCS_MARKER_END, 1)
-        updated = before + DOCS_MARKER_START + "\n" + section_html + DOCS_MARKER_END + after
-
-        with open(DOCS_DASHBOARD_PATH, "w", encoding="utf-8") as f:
-            f.write(updated)
+    os.makedirs("docs", exist_ok=True)
+    with open(DOCS_DASHBOARD_PATH, "w", encoding="utf-8") as f:
+        f.write(HTML_TEMPLATE.format(dashboard=section_html))
 
 
 def main() -> None:

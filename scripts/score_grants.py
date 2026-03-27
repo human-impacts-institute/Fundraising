@@ -620,8 +620,20 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
 
     lines: List[str] = []
     lines.append('<section class="dashboard">')
+    SHEETS_URL = (
+        "https://docs.google.com/spreadsheets/d/"
+        "14UTA60hSKQFvoE95IbHURWwx9N55mlGL9ErJJfpLxMI"
+        "/edit?gid=71185846#gid=71185846"
+    )
     lines.append('<div class="dashboard-meta">')
     lines.append('<button class="refresh-button" type="button">Refresh</button>')
+    lines.append(
+        f'<a class="sheets-link" href="{SHEETS_URL}" target="_blank" rel="noopener">'
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
+        '<path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3h5v2h-5V6zm0 4h5v2h-5v-2zm0 4h5v2h-5v-2zM7 6h3v2H7V6zm0 4h3v2H7v-2zm0 4h3v2H7v-2z"/>'
+        '</svg>'
+        'Open Spreadsheet</a>'
+    )
     lines.append(f"<div class=\"refreshed\">Last refreshed: {html.escape(today)}</div>")
     lines.append("</div>")
 

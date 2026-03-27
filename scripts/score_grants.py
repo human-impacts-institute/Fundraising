@@ -586,8 +586,12 @@ def build_dashboard_section_md(df: pd.DataFrame) -> str:
 
     # Sort lists
     update_queue = df.sort_values(["Review Priority Score", COL_PRIORITY, COL_ORG], ascending=[False, True, True])
-    apply_next = df[df["Application Priority Score"].notna()].copy()
-    apply_next = apply_next.sort_values(["Application Priority Score", "Next Deadline"], ascending=[False, True])
+    today_iso = date.today().isoformat()
+    apply_next = df[
+        df["Application Priority Score"].notna() &
+        (df["Next Deadline ISO"] >= today_iso)
+    ].copy()
+    apply_next = apply_next.sort_values(["Application Priority Score", "Next Deadline ISO"], ascending=[False, True])
 
     md: List[str] = []
     md.append(f"Last refreshed: {today}")
@@ -600,7 +604,7 @@ def build_dashboard_section_md(df: pd.DataFrame) -> str:
     md.append(f"- Funders with at least one deadline: {have_deadlines}")
     md.append("")
 
-    md.append(render_table_md(apply_next.to_dict(orient="records"), "Apply Next Queue (deadline-driven)", 30))
+    md.append(render_table_md(apply_next.to_dict(orient="records"), "Ready to Launch", 30))
     md.append("")
     md.append(render_table_md(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
     return "\n".join(md).strip() + "\n"
@@ -615,8 +619,12 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
     have_deadlines = total - missing_deadlines
 
     update_queue = df.sort_values(["Review Priority Score", COL_PRIORITY, COL_ORG], ascending=[False, True, True])
-    apply_next = df[df["Application Priority Score"].notna()].copy()
-    apply_next = apply_next.sort_values(["Application Priority Score", "Next Deadline"], ascending=[False, True])
+    today_iso = date.today().isoformat()
+    apply_next = df[
+        df["Application Priority Score"].notna() &
+        (df["Next Deadline ISO"] >= today_iso)
+    ].copy()
+    apply_next = apply_next.sort_values(["Application Priority Score", "Next Deadline ISO"], ascending=[False, True])
 
     lines: List[str] = []
     lines.append('<section class="dashboard">')
@@ -645,7 +653,7 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
     lines.append("</div>")
 
 
-    lines.append(render_apply_table_html(apply_next.to_dict(orient="records"), "Apply Next Queue (deadline-driven)", 30))
+    lines.append(render_apply_table_html(apply_next.to_dict(orient="records"), "Ready to Launch", 30))
     lines.append(render_table_html(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
     lines.append("</section>")
     return "\n".join(lines).strip() + "\n"
@@ -698,6 +706,7 @@ def main() -> None:
     df["Application Priority Score"] = apply_scores
     df["Program Matches"] = program_counts
     df["Next Deadline"] = [fmt_date(d) if d else "" for d in next_deadlines]
+    df["Next Deadline ISO"] = [d.isoformat() if d else "" for d in next_deadlines]
     df["Missing Deadlines"] = missing_deadlines_list
     df["Missing Sites"] = missing_sites_list
     df["LOI Date ISO"] = [fmt_date(parse_date_mmddyyyy(v)) for v in df[COL_LOI]]

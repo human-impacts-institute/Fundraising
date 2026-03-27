@@ -456,9 +456,9 @@ def render_table_html(rows: List[Dict[str, Any]], title: str, max_rows: int = 25
 def render_apply_table_html(rows: List[Dict[str, Any]], title: str, max_rows: int = 25) -> str:
     """Like render_table_html but with separate LOI/Apply by columns and a live countdown cell."""
     lines: List[str] = []
-    lines.append(f'<h2 class="queue-title">{html.escape(title)}</h2>')
+    lines.append(f'<h2 class="queue-title queue-title--apply">{html.escape(title)}</h2>')
     lines.append('<div class="table-wrap">')
-    lines.append('<table class="dashboard-table">')
+    lines.append('<table class="dashboard-table dashboard-table--apply">')
     lines.append(
         "<thead><tr>"
         "<th class=\"col-rank\">Rank</th>"

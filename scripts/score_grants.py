@@ -611,47 +611,6 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
     )
     lines.append("</div>")
 
-    lines.append("""
-<div class="grant-add-section">
-  <button class="grant-add-toggle" type="button" aria-expanded="false" aria-controls="grant-add-form">+ Add a grant funder</button>
-  <form id="grant-add-form" class="grant-add-form" hidden aria-label="Add a grant funder">
-    <div class="form-row">
-      <label for="ga-org">Organization name <span class="form-required">*</span></label>
-      <input id="ga-org" name="org" type="text" required placeholder="e.g. Ford Foundation" autocomplete="organization">
-    </div>
-    <div class="form-row">
-      <label for="ga-info-url">Information website</label>
-      <input id="ga-info-url" name="infoUrl" type="url" placeholder="https://...">
-    </div>
-    <div class="form-row">
-      <label for="ga-app-deadline">Application deadline (MM/DD/YYYY)</label>
-      <input id="ga-app-deadline" name="appDeadline" type="text" placeholder="03/31/2027" pattern="\\d{1,2}/\\d{1,2}/\\d{4}">
-    </div>
-    <div class="form-row">
-      <label for="ga-loi-deadline">LOI deadline (MM/DD/YYYY)</label>
-      <input id="ga-loi-deadline" name="loiDeadline" type="text" placeholder="02/15/2027" pattern="\\d{1,2}/\\d{1,2}/\\d{4}">
-    </div>
-    <div class="form-row">
-      <label for="ga-priority">Priority</label>
-      <select id="ga-priority" name="priority">
-        <option value="">-- select --</option>
-        <option value="HIGH">HIGH</option>
-        <option value="MEDIUM">MEDIUM</option>
-        <option value="LOW">LOW</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
-    <div class="form-row form-row--full">
-      <label for="ga-notes">Notes</label>
-      <textarea id="ga-notes" name="notes" rows="3" placeholder="Any relevant context..."></textarea>
-    </div>
-    <div class="form-actions">
-      <button type="submit" class="form-submit">Add funder</button>
-      <span class="form-status" aria-live="polite"></span>
-    </div>
-  </form>
-</div>
-""")
 
     lines.append(render_apply_table_html(apply_next.to_dict(orient="records"), "Apply Next Queue (deadline-driven)", 30))
     lines.append(render_table_html(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))

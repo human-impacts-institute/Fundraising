@@ -396,3 +396,12 @@ body { margin: 0; }
   margin: 0 auto;
   padding: 32px 24px;
 }
+
+/* Fade the dashboard in after login */
+@keyframes authFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+#auth-content:not([hidden]) {
+  animation: authFadeIn 350ms ease;
+}

@@ -29,6 +29,7 @@
 
     gate.hidden    = true;
     content.hidden = false;
+    window.scrollTo(0, 0);
     addSignOutButton(user);
   }
 

@@ -695,6 +695,9 @@ def main() -> None:
         if c not in df.columns:
             df[c] = ""
 
+    # Drop blank rows (sheet has many empty trailing rows)
+    df = df[df[COL_ORG].apply(lambda x: bool(norm_str(x)))].reset_index(drop=True)
+
     # Compute scores per row
     review_scores: List[int] = []
     apply_scores: List[Optional[int]] = []

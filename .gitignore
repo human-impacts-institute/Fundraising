@@ -1,6 +1,7 @@
 # Auto-generated dashboard outputs — only committed by GitHub Actions on main
 dashboards/grants_dashboard.md
 data/scored_grants.csv
+docs/index.html
 
 # Python
 __pycache__/

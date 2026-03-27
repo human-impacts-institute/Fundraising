@@ -38,16 +38,16 @@ import requests
 # Config: your current columns
 # ----------------------------
 COL_ORG = "Organization"
-COL_PRIORITY = "Priority"
+COL_PRIORITY = "Internal Tag (Importance)"
 COL_REL = "Relationship Status (Select all that apply)"
 COL_GEO = "Funding Geography (i.e. NYC, FRANCE, INTERNATIONAL, ALL)"
 COL_LOI = "LOI DEADLINE\nMM/DD/YEAR"
-COL_APP = "Application Deadline (MM/DD/YEAR"
+COL_APP = "Application Deadline (MM/DD/YEAR)"
 COL_LAST_UPDATED = "Date Last Updated"
 COL_INFO_SITE = "Information Website"
 COL_APP_SITE = "APPLICATION WEBSITE"
 COL_WHAT_FUND = "What they Fund"
-COL_NOTES = "Notes"
+COL_NOTES = "2026 Notes"
 
 PROGRAM_COLS = [
     "All",

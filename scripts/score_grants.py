@@ -567,9 +567,9 @@ def build_dashboard_section_md(df: pd.DataFrame) -> str:
     md.append(f"- Funders with at least one deadline: {have_deadlines}")
     md.append("")
 
-    md.append(render_table_md(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
-    md.append("")
     md.append(render_table_md(apply_next.to_dict(orient="records"), "Apply Next Queue (deadline-driven)", 30))
+    md.append("")
+    md.append(render_table_md(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
     return "\n".join(md).strip() + "\n"
 
 
@@ -653,8 +653,8 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
 </div>
 """)
 
-    lines.append(render_table_html(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
     lines.append(render_apply_table_html(apply_next.to_dict(orient="records"), "Apply Next Queue (deadline-driven)", 30))
+    lines.append(render_table_html(update_queue.to_dict(orient="records"), "Review / Research Priority Queue", 30))
     lines.append("</section>")
     return "\n".join(lines).strip() + "\n"
 

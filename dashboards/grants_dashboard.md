@@ -4,9 +4,9 @@ Last refreshed: 2026-03-27
 
 ### Snapshot
 
-- Total funders: 317
-- Funders missing both deadlines: 273
-- Funders missing websites: 14
+- Total funders: 318
+- Funders missing both deadlines: 274
+- Funders missing websites: 15
 - Funders with at least one deadline: 44
 
 ## Review / Research Priority Queue

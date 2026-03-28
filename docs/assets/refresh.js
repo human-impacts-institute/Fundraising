@@ -1,8 +1,6 @@
 (() => {
   const button = document.querySelector(".refresh-button");
-  if (!button) {
-    return;
-  }
+  if (!button) return;
 
   const proxyUrl = (window.REFRESH_PROXY_URL || "").trim();
   if (!proxyUrl) {
@@ -12,42 +10,45 @@
   }
 
   const defaultLabel = button.textContent || "Refresh";
-  const resetLabel = () => {
-    button.textContent = defaultLabel;
-  };
+
+  // How long to wait (ms) before auto-reloading after a successful dispatch.
+  // ~28s workflow (with pip cache) + ~7s buffer for Netlify deploy.
+  const RELOAD_AFTER_MS = 35_000;
 
   button.addEventListener("click", async () => {
-    if (button.disabled) {
-      return;
-    }
+    if (button.disabled) return;
 
     button.disabled = true;
     button.classList.add("is-loading");
-    button.textContent = "Refreshing...";
+    button.textContent = "Syncing…";
 
     try {
       const response = await fetch(proxyUrl, { method: "POST" });
-
-      if (!response.ok) {
-        throw new Error(`Refresh failed: ${response.status}`);
-      }
-
-      button.textContent = "Queued";
+      if (!response.ok) throw new Error(`${response.status}`);
     } catch (error) {
+      button.classList.remove("is-loading");
       button.classList.add("has-error");
       button.textContent = "Refresh failed";
-      button.disabled = false;
       setTimeout(() => {
         button.classList.remove("has-error");
-        resetLabel();
+        button.textContent = defaultLabel;
+        button.disabled = false;
       }, 3000);
       return;
     }
 
-    setTimeout(() => {
-      button.classList.remove("is-loading");
-      resetLabel();
-      button.disabled = false;
-    }, 3000);
+    // Count up every second, auto-reload when done.
+    let elapsed = 0;
+    const totalSecs = Math.round(RELOAD_AFTER_MS / 1000);
+
+    const tick = setInterval(() => {
+      elapsed++;
+      if (elapsed >= totalSecs) {
+        clearInterval(tick);
+        window.location.reload();
+      } else {
+        button.textContent = `Syncing… ${elapsed}s`;
+      }
+    }, 1000);
   });
 })();

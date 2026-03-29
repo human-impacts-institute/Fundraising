@@ -49,6 +49,8 @@ COL_INFO_SITE = "Information Website"
 COL_APP_SITE = "APPLICATION WEBSITE"
 COL_WHAT_FUND = "What they Fund"
 COL_NOTES = "2026 Notes"
+COL_STATUS    = "Open/Closed"
+COL_RELEVANCE = "Relevance"
 
 PROGRAM_COLS = [
     "All",
@@ -241,6 +243,23 @@ def effort_penalty(notes: str, what_fund: str) -> int:
     return max(0, penalty)
 
 
+def status_score(status: str) -> int:
+    s = norm_str(status).lower()
+    if s == "open":     return 10
+    if s == "rolling":  return 8
+    if s == "expected": return 3
+    if s == "closed":   return -20
+    return 0  # "unsure" or blank — neutral
+
+
+def relevance_score_fn(relevance: str) -> int:
+    s = norm_str(relevance).lower()
+    if s == "relevant":  return 15
+    if s == "monitor":   return 5
+    if s == "not ideal": return -10
+    return 0
+
+
 def staleness_score(last_updated: Optional[date]) -> int:
     today = date.today()
     if last_updated is None:
@@ -312,6 +331,8 @@ def compute_scores(row: pd.Series) -> Scores:
     rel_score = relationship_score(row.get(COL_REL, ""))
     notes = norm_str(row.get(COL_NOTES, ""))
     what_fund = norm_str(row.get(COL_WHAT_FUND, ""))
+    st_score  = status_score(row.get(COL_STATUS, ""))
+    rel_fn    = relevance_score_fn(row.get(COL_RELEVANCE, ""))
 
     loi = parse_date_mmddyyyy(row.get(COL_LOI, ""))
     app = parse_date_mmddyyyy(row.get(COL_APP, ""))
@@ -335,6 +356,8 @@ def compute_scores(row: pd.Series) -> Scores:
     review += staleness_score(last_updated)
     review += 20 if missing_deadlines else (10 if (loi is None) ^ (app is None) else 0)
     review += 5 if missing_sites else 0
+    review += st_score
+    review += rel_fn
     if not norm_str(row.get(COL_WHAT_FUND, "")):
         review += 5
     if not norm_str(row.get(COL_GEO, "")):
@@ -349,6 +372,8 @@ def compute_scores(row: pd.Series) -> Scores:
         apply += rel_score
         apply += urgency_score(next_deadline)
         apply -= effort_penalty(notes, what_fund)
+        apply += st_score
+        apply += rel_fn
 
     return Scores(
         review=review,
@@ -599,7 +624,9 @@ def build_dashboard_section_md(df: pd.DataFrame) -> str:
     today_iso = date.today().isoformat()
     apply_next = df[
         df["Application Priority Score"].notna() &
-        (df["Next Deadline ISO"] >= today_iso)
+        (df["Next Deadline ISO"] >= today_iso) &
+        (df[COL_STATUS].apply(lambda x: norm_str(x).lower()) != "closed") &
+        (df[COL_RELEVANCE].apply(lambda x: norm_str(x).lower()) != "not ideal")
     ].copy()
     apply_next = apply_next.sort_values(["Application Priority Score", "Next Deadline ISO"], ascending=[False, True])
 
@@ -632,7 +659,9 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
     today_iso = date.today().isoformat()
     apply_next = df[
         df["Application Priority Score"].notna() &
-        (df["Next Deadline ISO"] >= today_iso)
+        (df["Next Deadline ISO"] >= today_iso) &
+        (df[COL_STATUS].apply(lambda x: norm_str(x).lower()) != "closed") &
+        (df[COL_RELEVANCE].apply(lambda x: norm_str(x).lower()) != "not ideal")
     ].copy()
     apply_next = apply_next.sort_values(["Application Priority Score", "Next Deadline ISO"], ascending=[False, True])
 
@@ -700,7 +729,7 @@ def main() -> None:
     df = fetch_csv_to_df(url)
 
     # Ensure key columns exist, but do not crash if some are missing
-    for c in [COL_ORG, COL_PRIORITY, COL_REL, COL_LOI, COL_APP, COL_LAST_UPDATED, COL_INFO_SITE, COL_APP_SITE, COL_NOTES]:
+    for c in [COL_ORG, COL_PRIORITY, COL_REL, COL_LOI, COL_APP, COL_LAST_UPDATED, COL_INFO_SITE, COL_APP_SITE, COL_NOTES, COL_STATUS, COL_RELEVANCE]:
         if c not in df.columns:
             df[c] = ""
 

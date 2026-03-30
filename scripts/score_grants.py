@@ -531,11 +531,8 @@ def render_apply_table_html(rows: List[Dict[str, Any]], title: str, max_rows: in
         "<thead><tr>"
         "<th class=\"col-rank\">Rank</th>"
         "<th>Organization</th>"
-        "<th>Priority</th>"
-        "<th class=\"col-deadline\">LOI</th>"
         "<th class=\"col-deadline\">Apply by</th>"
         "<th class=\"col-days\">Days left</th>"
-        "<th class=\"col-programs\">Programs</th>"
         "<th>Links</th>"
         "<th>Notes</th>"
         "</tr></thead>"
@@ -592,17 +589,14 @@ def render_apply_table_html(rows: List[Dict[str, Any]], title: str, max_rows: in
             "<tr class=\"{rc}\">"
             "<td class=\"col-rank\">{rank}</td>"
             "<td class=\"col-org\">{org}</td>"
-            "<td class=\"col-priority\">{pri}</td>"
-            "<td class=\"col-deadline\">{loi}</td>"
             "<td class=\"col-deadline\">{app}</td>"
             "<td class=\"col-days\"{dattr}></td>"
-            "<td class=\"col-programs\">{pm}</td>"
             "<td class=\"col-links\">{links}</td>"
             "<td class=\"col-notes\">{notes}</td>"
             "</tr>".format(
-                rc=row_class, rank=i, org=org, pri=pri,
-                loi=loi_display, app=app_display, dattr=days_attr,
-                pm=pm, links=links_html, notes=notes,
+                rc=row_class, rank=i, org=org,
+                app=app_display, dattr=days_attr,
+                links=links_html, notes=notes,
             )
         )
 

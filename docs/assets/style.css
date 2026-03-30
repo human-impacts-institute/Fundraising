@@ -327,16 +327,19 @@ body { margin: 0; }
   width: 100%;
 }
 
-/* ── Site header (logo bar) ── */
-.site-header {
+/* ── Page header (title + logo row) ── */
+.page-header {
   display: flex;
-  justify-content: flex-end;
-  padding: 16px 28px 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
 }
 
 .site-logo {
-  height: 40px;
+  height: 48px;
   width: auto;
+  flex-shrink: 0;
+  margin-top: 4px;
 }
 
 .auth-logo {

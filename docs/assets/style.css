@@ -327,6 +327,18 @@ body { margin: 0; }
   width: 100%;
 }
 
+/* ── Site header (logo bar) ── */
+.site-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 28px 0;
+}
+
+.site-logo {
+  height: 40px;
+  width: auto;
+}
+
 .auth-logo {
   background: var(--hii-dark-blue);
   border-radius: 8px;

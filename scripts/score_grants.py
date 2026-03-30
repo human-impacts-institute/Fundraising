@@ -97,6 +97,9 @@ HTML_TEMPLATE = """\
     </div>
   </div>
   <div id="auth-content" hidden>
+    <header class="site-header">
+      <img src="assets/hii-logo.png" alt="Human Impacts Institute" class="site-logo">
+    </header>
     <main>
       <h1>Grants Dashboard</h1>
       <p>Strategic view of funding opportunities, split into two action queues: research and apply.</p>

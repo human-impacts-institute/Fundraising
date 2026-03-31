@@ -1,6 +1,6 @@
 # Grants Dashboard
 
-Last refreshed: 2026-03-30
+Last refreshed: 2026-03-31
 
 ### Snapshot
 
@@ -18,8 +18,8 @@ Last refreshed: 2026-03-30
 | 3 | Brooklyn ORG / Brooklyn Community Foundation | MEDIUM | 2026-05-15 | 7 | [info](https://brooklyn.org/) [apply](https://brooklyn.org/how-to-apply-for-bko-funding/) |  |
 | 4 | Barker Welfare Foundation | MEDIUM | 2026-08-01 | 6 | [info](https://www.barkerwelfare.org/) [apply](https://www.barkerwelfare.org/funding-inquiry/) |  |
 | 5 | NBC Universal Impact Grants | HIGH, 2025 TO DO | 2026-04-15 | 1 | [info](https://www.localimpactgrants.com/) | The applying organization’s total expenses must be between $100,000 and $1,00... |
-| 6 | Tiffany & Co. Foundation | MEDIUM | 2026-05-01 | 3 | [info](https://www.tiffanyandcofoundation.org) [apply](https://www.tiffanyandcofoundation.org/how-to-apply.html) |  |
-| 7 | Vilcek Foundation |  | 2026-04-30 | 5 | [info](https://vilcek.org/grants/) [apply](https://portal.vilcek.org/grantportal/s/login/?ec=302&startURL=%2Fgrantportal%2Fs%2F%3F_gl%3D1*epgerc*_gcl_au*MTMwODY3NzE0Ni4xNzM3NzM0ODk3*_ga*MTY4Mjg0NTYzNy4xNzM3NzM0ODk3*_ga_PMRH1P23GE*MTczNzczNDg5Ny4xLjEuMTczNzczNTQyMC4wLjAuMA..*_ga_2V5DYM0WCN*MTczNzczNDg5Ny4xLjEuMTczNzczNTQyMC41OS4wLjE0Mzg2MzM5NA..) |  |
+| 6 | Vilcek Foundation |  | 2026-04-30 | 5 | [info](https://vilcek.org/grants/) [apply](https://portal.vilcek.org/grantportal/s/login/?ec=302&startURL=%2Fgrantportal%2Fs%2F%3F_gl%3D1*epgerc*_gcl_au*MTMwODY3NzE0Ni4xNzM3NzM0ODk3*_ga*MTY4Mjg0NTYzNy4xNzM3NzM0ODk3*_ga_PMRH1P23GE*MTczNzczNDg5Ny4xLjEuMTczNzczNTQyMC4wLjAuMA..*_ga_2V5DYM0WCN*MTczNzczNDg5Ny4xLjEuMTczNzczNTQyMC41OS4wLjE0Mzg2MzM5NA..) |  |
+| 7 | Tiffany & Co. Foundation | MEDIUM | 2026-05-01 | 3 | [info](https://www.tiffanyandcofoundation.org) [apply](https://www.tiffanyandcofoundation.org/how-to-apply.html) |  |
 | 8 | Prince Albert of Monaco II Foundation (HII Europe) | 2026 TO DO | 2026-03-31 | 1 | [info](https://www.fpa2.org/en/submit-a-project) [apply](https://www.fpa2.org/en/submit-a-project) | Applied in 2025; strong climate fit and should be actively followed up. |
 | 9 | NYSERDA (Dept of Labor) - Climate Justice Fellow | 2026 TO DO | 2026-06-30 | 3 | [info](https://www.nyserda.ny.gov/All-Programs/Climate-Justice-Fellowship) [apply](https://portal.nyserda.ny.gov/CORE_Solicitation_Detail_Page?SolicitationId=a0rt000001Mh9IN&_gl=1*1gejtjc*_gcl_au*ODAyMzgwODYyLjE3MzgwMTkwMDY.*_ga*MjAwNTY0NzUwNi4xNzM4MDE4Njk0*_ga_DRYJB34TXH*MTczODAxOTAwNi4xLjEuMTczODAxOTE1MS42MC4wLjA.) | Rolling admissions on first come first served Up to $40k per fellow Fellow mu... |
 | 10 | RTX Corporation | MEDIUM | 2026-07-31 | 6 | [info](https://www.utcfoundation.org/who-we-are.html) [apply](https://www.utcfoundation.org/contact-us.html) | Must be sponsored by an RTX employee to apply |

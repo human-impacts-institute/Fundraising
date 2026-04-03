@@ -465,7 +465,6 @@ def render_table_html(rows: List[Dict[str, Any]], title: str, max_rows: int = 25
         "<th class=\"col-rank\">Rank</th>"
         "<th>Organization</th>"
         "<th>Next deadline</th>"
-        "<th class=\"col-programs\">Programs</th>"
         "<th>Links</th>"
         "<th>Notes</th>"
         "</tr></thead>"
@@ -505,7 +504,6 @@ def render_table_html(rows: List[Dict[str, Any]], title: str, max_rows: int = 25
             "<td class=\"col-rank\">{}</td>"
             "<td class=\"col-org\">{}</td>"
             "<td class=\"col-deadline\">{}</td>"
-            "<td class=\"col-programs\">{}</td>"
             "<td class=\"col-links\">{}</td>"
             "<td class=\"col-notes\">{}</td>"
             "</tr>".format(
@@ -513,7 +511,6 @@ def render_table_html(rows: List[Dict[str, Any]], title: str, max_rows: int = 25
                 i,
                 org,
                 nd,
-                pm,
                 links_html,
                 notes,
             )

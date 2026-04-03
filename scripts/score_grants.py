@@ -628,6 +628,8 @@ def build_dashboard_section_md(df: pd.DataFrame) -> str:
         (df[COL_RELEVANCE].apply(lambda x: norm_str(x).lower()) != "not ideal")
     ].copy()
     apply_next = apply_next.sort_values(["Application Priority Score", "Next Deadline ISO"], ascending=[False, True])
+    on_deck_idx = set(apply_next.index)
+    update_queue = update_queue[~update_queue.index.isin(on_deck_idx)]
 
     md: List[str] = []
     md.append(f"Last refreshed: {today}")
@@ -663,6 +665,8 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
         (df[COL_RELEVANCE].apply(lambda x: norm_str(x).lower()) != "not ideal")
     ].copy()
     apply_next = apply_next.sort_values(["Application Priority Score", "Next Deadline ISO"], ascending=[False, True])
+    on_deck_idx = set(apply_next.index)
+    update_queue = update_queue[~update_queue.index.isin(on_deck_idx)]
 
     lines: List[str] = []
     lines.append('<section class="dashboard">')

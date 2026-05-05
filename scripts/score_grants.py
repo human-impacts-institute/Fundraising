@@ -678,8 +678,47 @@ def build_dashboard_section_html(df: pd.DataFrame) -> str:
         '</svg>'
         'Open Spreadsheet</a>'
     )
+    lines.append('<button class="grant-add-toggle" type="button" aria-expanded="false">+ Add Grant</button>')
     lines.append(f"<div class=\"refreshed\">Last refreshed: {html.escape(today)}</div>")
     lines.append("</div>")
+    lines.append("""\
+<form id="grant-add-form" hidden>
+  <div class="form-grid">
+    <div class="form-field">
+      <label for="ga-org">Organization *</label>
+      <input id="ga-org" type="text" placeholder="Funder name" required>
+    </div>
+    <div class="form-field">
+      <label for="ga-info-url">Info URL</label>
+      <input id="ga-info-url" type="url" placeholder="https://...">
+    </div>
+    <div class="form-field">
+      <label for="ga-app-deadline">App Deadline</label>
+      <input id="ga-app-deadline" type="text" placeholder="MM/DD/YYYY">
+    </div>
+    <div class="form-field">
+      <label for="ga-loi-deadline">LOI Deadline</label>
+      <input id="ga-loi-deadline" type="text" placeholder="MM/DD/YYYY">
+    </div>
+    <div class="form-field">
+      <label for="ga-priority">Priority</label>
+      <select id="ga-priority">
+        <option value="">—</option>
+        <option value="HIGH">HIGH</option>
+        <option value="MEDIUM">MEDIUM</option>
+        <option value="LOW">LOW</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-field form-field--full">
+    <label for="ga-notes">Notes</label>
+    <textarea id="ga-notes" rows="2" placeholder="Any context or notes…"></textarea>
+  </div>
+  <div class="form-footer">
+    <button class="form-submit" type="submit">Save to Sheet</button>
+    <span class="form-status"></span>
+  </div>
+</form>""")
 
     lines.append('<div class="snapshot">')
     lines.append(

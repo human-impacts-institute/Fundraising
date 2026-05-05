@@ -34,8 +34,46 @@
 <div class="dashboard-meta">
 <button class="refresh-button" type="button">Refresh</button>
 <a class="sheets-link" href="https://docs.google.com/spreadsheets/d/14UTA60hSKQFvoE95IbHURWwx9N55mlGL9ErJJfpLxMI/edit?gid=71185846#gid=71185846" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3h5v2h-5V6zm0 4h5v2h-5v-2zm0 4h5v2h-5v-2zM7 6h3v2H7V6zm0 4h3v2H7v-2zm0 4h3v2H7v-2z"/></svg>Open Spreadsheet</a>
-<div class="refreshed">Last refreshed: 2026-05-05</div>
+<button class="grant-add-toggle" type="button" aria-expanded="false">+ Add Grant</button>
+<div class="refreshed">Last refreshed: 2026-05-04</div>
 </div>
+<form id="grant-add-form" hidden>
+  <div class="form-grid">
+    <div class="form-field">
+      <label for="ga-org">Organization *</label>
+      <input id="ga-org" type="text" placeholder="Funder name" required>
+    </div>
+    <div class="form-field">
+      <label for="ga-info-url">Info URL</label>
+      <input id="ga-info-url" type="url" placeholder="https://...">
+    </div>
+    <div class="form-field">
+      <label for="ga-app-deadline">App Deadline</label>
+      <input id="ga-app-deadline" type="text" placeholder="MM/DD/YYYY">
+    </div>
+    <div class="form-field">
+      <label for="ga-loi-deadline">LOI Deadline</label>
+      <input id="ga-loi-deadline" type="text" placeholder="MM/DD/YYYY">
+    </div>
+    <div class="form-field">
+      <label for="ga-priority">Priority</label>
+      <select id="ga-priority">
+        <option value="">—</option>
+        <option value="HIGH">HIGH</option>
+        <option value="MEDIUM">MEDIUM</option>
+        <option value="LOW">LOW</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-field form-field--full">
+    <label for="ga-notes">Notes</label>
+    <textarea id="ga-notes" rows="2" placeholder="Any context or notes…"></textarea>
+  </div>
+  <div class="form-footer">
+    <button class="form-submit" type="submit">Save to Sheet</button>
+    <span class="form-status"></span>
+  </div>
+</form>
 <div class="snapshot">
 <div class="card"><div class="card-label">Total funders</div><div class="card-value">318</div></div>
 <div class="card"><div class="card-label">Missing deadlines</div><div class="card-value">273</div></div>

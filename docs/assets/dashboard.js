@@ -107,13 +107,13 @@
       }
 
       try {
-        const res = await fetch(addUrl, {
+        await fetch(addUrl, {
           method:  "POST",
-          headers: { "Content-Type": "application/json" },
+          mode:    "no-cors",
+          headers: { "Content-Type": "text/plain" },
           body:    JSON.stringify(data),
         });
-
-        if (!res.ok) throw new Error(`Server returned ${res.status}`);
+        // no-cors returns an opaque response — assume success if fetch resolves
 
         if (statusEl) {
           statusEl.textContent = "Added! Hit Refresh to update the dashboard.";

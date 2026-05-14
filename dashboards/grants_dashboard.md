@@ -46,14 +46,14 @@ Last refreshed: 2026-05-14
 | 17 | Climate Emergency Fund | HIGH |  | 2 | [info](https://www.climateemergencyfund.org/apply) [apply](https://webportalapp.com/sp/login/cef_application) | They don't fund organizations that don't utilize disruptive protest or art in... |
 | 18 | NYSP2I (The New York State Pollution Prevention Institute) | MEDIUM | 2026-04-18 | 7 | [info](https://www.rit.edu/affiliate/nysp2i/funding) |  |
 | 19 | Laudes Foundation (NL/CH) | MEDIUM |  | 3 | [info](https://builtbn.org/grants/) [apply](https://builtbn.org/expression-of-interest/) |  |
-| 20 | Commission for Environmental Cooperation | HIGH |  | 1 | [info](http://www.cec.org/grant-programs/ej4climate/) [apply](https://www.grantinterface.ca/Process/Apply?urlkey=cec) | New cycle not yet open; expected Summer 2026. |
-| 21 | Patagonia International | HIGH |  | 0 | [info](https://eu.patagonia.com/gb/en/how-we-fund/) | Not funding in the USA; possibly relevant only for HII Europe work. Patagonia... |
-| 22 | Grantham Foundation | MEDIUM |  | 5 | [info](https://www.granthamfoundation.org/) |  |
-| 23 | IOBY (crowd funding) | MEDIUM |  | 7 | [info](https://ioby.org/resources/closing/) |  |
-| 24 | Stavros Niarchos Foundation | MEDIUM |  | 5 | [info](https://www.snf.org/) [apply](https://www.snf.org/en/apply-now/) |  |
-| 25 | HCLTech Grant Americas | 2026 TO DO |  | 3 | [info](https://americas-grant.hcltech.com/application-guidelines) [apply](https://americas-grant.hcltech.com/user/register) | Closed 1/24/2026 |
-| 26 | M&T Bank Foundation | 2026 TO DO |  | 3 | [info](https://www3.mtb.com/about-mt/charitable-contributions) [apply](https://mtb.versaic.com/login) | Application is currently open; no known deadline |
-| 27 | William and Flora Hewlett Foundation | MEDIUM |  | 6 | [info](https://hewlett.org/programs/environment/) [apply](https://hewlett.smapply.io) |  |
-| 28 | NYC Venture Philanthropy Fund | NO |  | 8 | [info](https://philanthropynewyork.org/redhen/org/113) [apply](https://philanthropynewyork.org/search?keys=grants) |  |
-| 29 | Solutions Search Contest | LOW |  | 4 | [info](https://solutionsearch.org/solutions-already-exist) |  |
-| 30 | Artists Fund | MEDIUM |  | 0 | [info](https://theartistsfund-foa.org/) [apply](https://theartistsfund-foa.org/hardship-grant/) |  |
+| 20 | Patagonia International | HIGH |  | 0 | [info](https://eu.patagonia.com/gb/en/how-we-fund/) | Not funding in the USA; possibly relevant only for HII Europe work. Patagonia... |
+| 21 | Grantham Foundation | MEDIUM |  | 5 | [info](https://www.granthamfoundation.org/) |  |
+| 22 | IOBY (crowd funding) | MEDIUM |  | 7 | [info](https://ioby.org/resources/closing/) |  |
+| 23 | Stavros Niarchos Foundation | MEDIUM |  | 5 | [info](https://www.snf.org/) [apply](https://www.snf.org/en/apply-now/) |  |
+| 24 | HCLTech Grant Americas | 2026 TO DO |  | 3 | [info](https://americas-grant.hcltech.com/application-guidelines) [apply](https://americas-grant.hcltech.com/user/register) | Closed 1/24/2026 |
+| 25 | M&T Bank Foundation | 2026 TO DO |  | 3 | [info](https://www3.mtb.com/about-mt/charitable-contributions) [apply](https://mtb.versaic.com/login) | Application is currently open; no known deadline |
+| 26 | William and Flora Hewlett Foundation | MEDIUM |  | 6 | [info](https://hewlett.org/programs/environment/) [apply](https://hewlett.smapply.io) |  |
+| 27 | NYC Venture Philanthropy Fund | NO |  | 8 | [info](https://philanthropynewyork.org/redhen/org/113) [apply](https://philanthropynewyork.org/search?keys=grants) |  |
+| 28 | Solutions Search Contest | LOW |  | 4 | [info](https://solutionsearch.org/solutions-already-exist) |  |
+| 29 | Artists Fund | MEDIUM |  | 0 | [info](https://theartistsfund-foa.org/) [apply](https://theartistsfund-foa.org/hardship-grant/) |  |
+| 30 | Honda Foundation | MEDIUM |  | 2 | [info](https://csr.honda.com/longform-content/honda-usa-foundation-funding/) | Not eligible for community event sponsorship because not one of the counties ... |

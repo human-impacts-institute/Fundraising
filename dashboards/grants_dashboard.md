@@ -5,9 +5,9 @@ Last refreshed: 2026-05-22
 ### Snapshot
 
 - Total funders: 328
-- Funders missing both deadlines: 281
+- Funders missing both deadlines: 282
 - Funders missing websites: 7
-- Funders with at least one deadline: 47
+- Funders with at least one deadline: 46
 
 ## On Deck
 

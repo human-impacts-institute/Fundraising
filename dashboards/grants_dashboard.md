@@ -1,11 +1,11 @@
 # Grants Dashboard
 
-Last refreshed: 2026-10-13
+Last refreshed: 2026-10-20
 
 ### Snapshot
 
-- Total funders: 329
-- Funders missing both deadlines: 287
+- Total funders: 330
+- Funders missing both deadlines: 288
 - Funders missing websites: 7
 - Funders with at least one deadline: 42
 
@@ -14,9 +14,8 @@ Last refreshed: 2026-10-13
 | Rank | Organization | Priority | Next deadline | Programs | Links | Notes |
 | ---: | --- | --- | --- | ---: | --- | --- |
 | 1 | Simons Foundation | HIGH | 2026-10-21 | 0 | [info](https://www.simonsfoundation.org/science-society-culture/grantmaking/the-triangle-program/) | The Triangle Program: must apply with a trio of scientist, artist, and org Is... |
-| 2 | Dreyfus Foundation | MEDIUM | 2026-10-15 | 0 | [info](http://www.mvdreyfusfoundation.org/#!application-guidelines) [apply](https://webportalapp.com/sp/login/max_and_victoria_dreyfus_foundation_grant) |  |
-| 3 | Howard Gilman Foundation | MEDIUM | 2027-03-13 | 0 | [info](https://howardgilmanfoundation.org/funding-approach/) [apply](https://howardgilmanfoundation.org/resources/interest-form/) | Interest form: https://howardgilmanfoundation.org/resources/interest-form/ |
-| 4 | RTX Corporation | MEDIUM | 2027-07-31 | 0 | [info](https://www.utcfoundation.org/who-we-are.html) [apply](https://www.utcfoundation.org/contact-us.html) |  |
+| 2 | Howard Gilman Foundation | MEDIUM | 2027-03-13 | 0 | [info](https://howardgilmanfoundation.org/funding-approach/) [apply](https://howardgilmanfoundation.org/resources/interest-form/) | Interest form: https://howardgilmanfoundation.org/resources/interest-form/ |
+| 3 | RTX Corporation | MEDIUM | 2027-07-31 | 0 | [info](https://www.utcfoundation.org/who-we-are.html) [apply](https://www.utcfoundation.org/contact-us.html) |  |
 
 ## Review / Research Priority Queue
 
